@@ -1,0 +1,9 @@
+# vite config
+vite.config.js
+
+# tailwind config
+tailwind.config.cjs
+postcss.config.cjs
+
+# dist
+/dist
