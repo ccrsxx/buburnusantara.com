@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  dialog {
+    @apply pointer-events-none fixed inset-0 mx-auto translate-y-48 opacity-0 transition duration-500;
+  }
+
+  dialog[open] {
+    @apply pointer-events-auto translate-y-0 opacity-100;
+  }
+
+  dialog::backdrop {
+    @apply bg-black/50;
+  }
+
+  .home-container {
+    @apply min-h-screen bg-[url(assets/home-background.webp)] bg-center;
+  }
+
+  .nav-link {
+    @apply uppercase tracking-[0.2em] text-white/50 transition hover:text-white/75;
+  }
+}
+
+@layer components {
+  .smooth-tab {
+    @apply outline-none focus-visible:ring-2 focus-visible:transition-shadow focus-visible:duration-200;
+  }
+}
