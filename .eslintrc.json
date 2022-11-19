@@ -26,6 +26,38 @@
     "no-console": "warn",
     "comma-dangle": ["error", "never"],
     "no-unused-expressions": "error",
+    "no-constant-binary-expression": "error",
+    "import/order": [
+      "warn",
+      {
+        "pathGroups": [
+          {
+            "pattern": "*.scss",
+            "group": "builtin",
+            "position": "before",
+            "patternOptions": { "matchBase": true }
+          }
+        ],
+        "warnOnUnassignedImports": true,
+        "pathGroupsExcludedImportTypes": ["type"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": { "arguments": false }
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": "warn",
     "@typescript-eslint/prefer-nullish-coalescing": "warn",
     "@typescript-eslint/explicit-function-return-type": "warn"
