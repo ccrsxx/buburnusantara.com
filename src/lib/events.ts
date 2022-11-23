@@ -1,24 +1,25 @@
-import './style.scss';
-
 import toast from 'sweetalert2';
+import { spinnerIcon } from '../components/ui/spinner';
+import { sendEmail } from './mail';
 import {
   reservationForm,
   reservationDialog,
-  reserveSubmitButton,
   reservationOpenButton,
-  reservationCloseButton
-} from './lib/elements';
-import { sendEmail } from './lib/mail';
-import type { Reservation } from './lib/types/reservation';
+  reservationCloseButton,
+  reservationSubmitButton
+} from './elements';
+import type { Reservation } from '../lib/types/reservation';
 
 reservationOpenButton.addEventListener('click', handleReservationButtonOpen);
 reservationCloseButton.addEventListener('click', handleReservationDialogClose);
 
-reserveSubmitButton.addEventListener('click', handleReservationDialogClose);
 reservationForm.addEventListener('submit', handleReservationSubmit);
 
 async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
   e.preventDefault();
+
+  reservationSubmitButton.innerHTML = spinnerIcon;
+  reservationSubmitButton.disabled = true;
 
   const formData = new FormData(reservationForm);
   const reservation = Object.fromEntries(formData) as Reservation;
@@ -29,8 +30,13 @@ async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
 
   reservationForm.reset();
 
+  reservationSubmitButton.innerHTML = 'Reserve Now';
+  reservationSubmitButton.disabled = false;
+
   await toast.fire({
-    title: 'Reservation sent!'
+    icon: 'success',
+    title: 'Reservation was sent!',
+    text: 'We will get back to you shortly.'
   });
 }
 
@@ -43,5 +49,3 @@ function handleReservationDialogClose(): void {
   document.body.style.overflow = '';
   reservationDialog.close();
 }
-
-if (import.meta.hot) import.meta.hot.accept();

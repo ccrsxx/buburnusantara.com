@@ -1,0 +1,11 @@
+.swiper-slide {
+  @apply rounded-b-md bg-white #{!important};
+}
+
+.swiper-pagination-bullet {
+  @apply h-2.5 w-2.5 #{!important};
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-[#FDA403] #{!important};
+}
