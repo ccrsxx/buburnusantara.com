@@ -1,13 +1,13 @@
 import toast from 'sweetalert2';
 import { spinnerIcon } from '../components/ui/spinner';
-import { sendEmail } from './mail';
+import { sendEmail } from '../lib/mail';
 import {
   reservationForm,
   reservationDialog,
   reservationOpenButton,
   reservationCloseButton,
   reservationSubmitButton
-} from './elements';
+} from '../lib/elements';
 import type { Reservation } from '../lib/types/reservation';
 
 reservationOpenButton.addEventListener('click', handleReservationButtonOpen);

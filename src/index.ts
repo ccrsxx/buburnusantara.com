@@ -7,7 +7,7 @@ import './components/about';
 import './components/offer';
 import './components/menu';
 
-import './lib/animate';
-import './lib/events';
-
-if (import.meta.hot) import.meta.hot.accept();
+import './events/animate';
+import './events/reserve';
+import './events/swiper';
+import './events/dishes';

@@ -1,8 +1,4 @@
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import { Swiper, Pagination } from 'swiper';
+import { html } from '../lib/utils';
 import { main } from './main';
 
 type Offer = {
@@ -41,76 +37,55 @@ const placeholderOffers = [...(Array(3) as undefined[])].reduce(
   [] as Offer[]
 );
 
-main.innerHTML += /* html */ `
-  <section id="offer" class="bg-[#f8f9fa]">
+main.innerHTML += html`
+  <section
+    id="offer"
+    class="hidden-section grid justify-items-center gap-8 bg-[#f8f9fa]"
+    data-index="2"
+  >
     <div
-      class="section-hide grid justify-items-center gap-8"
-      data-index="2"
+      class="animated-element fade-bottom grid gap-4 text-center 
+             [&>p]:text-lg [&>p]:text-[#b8b8b8]"
     >
-      <div
-        class="animated-element grid animate-[fadeFromBottom_500ms_forwards] gap-4 [&>p]:text-lg"
-      >
-        <div class="grid gap-4 text-center [&>p]:text-[#b8b8b8]">
-          <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
-          <h2 class="font-poppins text-6xl font-bold text-black">
-            Our Offer This Summer
-          </h2>
-          <p class="max-w-md justify-self-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio aliquid unde rem odio dolor quae illum reiciendis
-            quia similique voluptates in, eos optio voluptatem. Dolorum quis
-            eaque delectus nostrum nemo.
-          </p>
-        </div>
-      </div>
-      <div class="swiper h-full max-w-4xl !pb-12 text-black">
-        <div
-          class="swiper-wrapper cursor-grab select-none"
-        >
-          ${placeholderOffers.reduce(
-            (acc, { name, price, image, description }, index) => {
-              const indexOfThree = index % 3;
+      <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
+      <h2 class="font-poppins text-6xl font-bold text-black">
+        Our Offer This Summer
+      </h2>
+      <p class="max-w-xl justify-self-center text-xl font-light">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        aliquid unde rem odio dolor quae illum reiciendis quia similique
+        voluptates in, eos optio voluptatem. Dolorum quis eaque delectus nostrum
+        nemo.
+      </p>
+    </div>
+    <div
+      class="swiper animated-element fade-bottom h-full max-w-4xl !pb-12 text-black"
+    >
+      <div class="swiper-wrapper cursor-grab select-none">
+        ${placeholderOffers.reduce(
+          (acc, { name, price, image, description }) => {
+            // TODO: add staggered animation
+            // const indexOfThree = index % 3;
+            // 'animated-element fade-bottom ${index === 1 ? 'delay-100' : index === 2 ? 'delay-200' : ''}
 
-              return (
-                acc +
-                `
-                  <div
-                    class="swiper-slide animated-element animate-[fadeFromBottom_${
-                      indexOfThree === 0
-                        ? '500ms'
-                        : indexOfThree === 1
-                        ? '600ms'
-                        : '700ms'
-                    }_forwards]"
-                  >
-                    <img class="h-52 rounded-t-md" src="${image}" alt="${name}" />
-                    <div class="grid gap-2 p-8 text-center">
-                      <h5 class="font-poppins text-[#FDA403]">${price}</h5>
-                      <h5 class="font-poppins font-bold">${name}</h5>
-                      <p>${description}</p>
-                    </div>
+            return (
+              acc +
+              html`
+                <div class="swiper-slide">
+                  <img class="h-52 rounded-t-md" src="${image}" alt="${name}" />
+                  <div class="grid gap-2 p-8 text-center">
+                    <h5 class="font-poppins text-[#FDA403]">${price}</h5>
+                    <h5 class="font-poppins font-bold">${name}</h5>
+                    <p>${description}</p>
                   </div>
-                `
-              );
-            },
-            ''
-          )}
-        </div>
-        <div class="swiper-pagination"></div>
+                </div>
+              `
+            );
+          },
+          ''
+        )}
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 `;
-
-new Swiper('.swiper', {
-  modules: [Pagination],
-  slidesPerView: 3,
-  spaceBetween: 30,
-  slidesPerGroup: 3,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-});

@@ -1,0 +1,56 @@
+import { navbar, navLinks, mainTitle, hiddenSections } from '../lib/elements';
+
+let currentActiveLink: number;
+
+const hiddenSectionsObserver = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((entry) => {
+      const sectionElement = entry.target as HTMLElement;
+      const sectionIndex = +(sectionElement.dataset.index as string);
+
+      const navElement = navLinks[sectionIndex];
+
+      const sectionAnimatedElements =
+        sectionElement.querySelectorAll('.animated-element');
+
+      if (entry.isIntersecting) {
+        currentActiveLink = sectionIndex;
+
+        if (sectionIndex >= 1) navbar.classList.add('scrolled-bottom');
+        else navbar.classList.remove('scrolled-bottom');
+
+        navElement.classList.add('active');
+
+        sectionAnimatedElements.forEach((element) =>
+          element.classList.add('show')
+        );
+      } else {
+        navElement.classList.remove('active');
+
+        sectionAnimatedElements.forEach((element) =>
+          element.classList.remove('show')
+        );
+      }
+    }),
+  { threshold: 0.5 }
+);
+
+const mainTitleObserver = new IntersectionObserver(
+  (entries) =>
+    entries.forEach(({ isIntersecting }) => {
+      if (!isIntersecting) {
+        navbar.classList.add('scrolled-middle');
+        setTimeout(() => navbar.classList.add('sleep'), 500);
+      } else if (currentActiveLink === 0) {
+        navbar.classList.remove('sleep');
+        navbar.classList.remove('scrolled-middle');
+      }
+    }),
+  { threshold: 1 }
+);
+
+hiddenSections.forEach((hiddenSection) =>
+  hiddenSectionsObserver.observe(hiddenSection)
+);
+
+mainTitleObserver.observe(mainTitle);

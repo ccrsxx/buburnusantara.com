@@ -1,8 +1,10 @@
-const navbar = document.querySelector('header') as HTMLElement;
-const mainTitle = document.querySelector('.main-title') as HTMLElement;
-
 const navLinks = document.querySelectorAll('.nav-link');
-const hiddenSections = document.querySelectorAll('.section-hide');
+const hiddenSections = document.querySelectorAll('.hidden-section');
+const menuButtons = document.querySelectorAll('.menu-button');
+
+const navbar = document.getElementById('navbar') as HTMLElement;
+const mainTitle = document.getElementById('main-title') as HTMLElement;
+const menuContainer = document.getElementById('menu-container') as HTMLElement;
 
 const reservationDialog = document.getElementById(
   'reservation-dialog'
@@ -28,6 +30,8 @@ export {
   navbar,
   navLinks,
   mainTitle,
+  menuButtons,
+  menuContainer,
   hiddenSections,
   reservationForm,
   reservationDialog,

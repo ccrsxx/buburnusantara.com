@@ -1,0 +1,15 @@
+.fade-bottom {
+  @apply translate-y-8 opacity-0 transition duration-500;
+}
+
+.fade-bottom.show {
+  @apply translate-y-0 opacity-100;
+}
+
+.fade-right {
+  @apply translate-x-8 opacity-0 transition duration-500;
+}
+
+.fade-right.show {
+  @apply translate-x-0 opacity-100;
+}
