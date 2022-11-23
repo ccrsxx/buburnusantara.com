@@ -185,11 +185,11 @@
     </div>
     <img
       class="animated-element fade-right h-72 w-[448px] rounded-md"
-      src="/assets/about-background.webp"
+      src="/bubur-nusantara/assets/about-background.webp"
       alt="Chef"
     />
   </section>
-`;const eo=[{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/assets/offer-1.webp"},{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/assets/offer-2.webp"},{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/assets/offer-3.webp"}],to=[...Array(3)].reduce(e=>[...e,...eo],[]);qe.innerHTML+=ne`
+`;const eo=[{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/bubur-nusantara/assets/offer-1.webp"},{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/bubur-nusantara/assets/offer-2.webp"},{name:"Eggs with Garlic",price:29.5,description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.",image:"/bubur-nusantara/assets/offer-3.webp"}],to=[...Array(3)].reduce(e=>[...e,...eo],[]);qe.innerHTML+=ne`
   <section
     id="offer"
     class="hidden-section grid justify-items-center gap-8 bg-[#f8f9fa]"
