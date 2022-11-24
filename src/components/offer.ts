@@ -8,21 +8,21 @@ const offers: Readonly<Product[]> = [
     price: 29.5,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/bubur-nusantara/assets/offer-1.webp'
+    image: '/assets/offer-1.webp'
   },
   {
     name: 'Eggs with Garlic',
     price: 29.5,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/bubur-nusantara/assets/offer-2.webp'
+    image: '/assets/offer-2.webp'
   },
   {
     name: 'Eggs with Garlic',
     price: 29.5,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/bubur-nusantara/assets/offer-3.webp'
+    image: '/assets/offer-3.webp'
   }
 ];
 

@@ -28,7 +28,7 @@ main.innerHTML += html`
     </div>
     <img
       class="animated-element fade-right h-72 w-[448px] rounded-md"
-      src="/bubur-nusantara/assets/about-background.webp"
+      src="/assets/about-background.webp"
       alt="Chef"
     />
   </section>
