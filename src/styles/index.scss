@@ -31,7 +31,7 @@
   }
 
   .navbar {
-    @apply absolute flex w-full items-center justify-between py-10 px-16 transition-opacity duration-200;
+    @apply absolute flex w-full items-center justify-center py-10 px-16 transition-opacity duration-200;
   }
 
   .navbar.sleep {

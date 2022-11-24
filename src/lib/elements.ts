@@ -3,7 +3,7 @@ const hiddenSections = document.querySelectorAll('.hidden-section');
 const menuButtons = document.querySelectorAll('.menu-button');
 
 const navbar = document.getElementById('navbar') as HTMLElement;
-const mainTitle = document.getElementById('main-title') as HTMLElement;
+const mainTitle = document.getElementById('home') as HTMLElement;
 const menuContainer = document.getElementById('menu-container') as HTMLElement;
 
 const reservationDialog = document.getElementById(

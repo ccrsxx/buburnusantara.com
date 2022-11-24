@@ -1,6 +1,5 @@
 import { menuButtons } from '../lib/elements';
-
-type Menu = 'breakfast' | 'lunch' | 'dinner';
+import type { Menu } from '../lib/types/menu';
 
 let currentMenu: Menu = 'breakfast';
 

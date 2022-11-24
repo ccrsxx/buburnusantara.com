@@ -3,30 +3,31 @@ import { dialog } from './ui/dialog';
 import { main } from './main';
 
 main.innerHTML += html`
-  <section id="home" class="hidden-section py-0" data-index="0">
-    <div
-      id="main-title"
-      class="grid min-h-screen place-content-center 
-             justify-items-center gap-12 pt-10 text-center"
+  <section
+    id="home"
+    class="hidden-section grid min-h-screen content-center gap-12 bg-gray-800 
+           bg-[url(/assets/home-background.webp)] bg-center py-0 pt-10 text-center"
+    data-index="0"
+  >
+    <h1
+      class="animated-element fade-bottom font-poppins text-7xl font-bold text-white"
     >
-      <h1 class="animated-element fade-bottom font-poppins text-7xl font-bold">
-        Welcome to Bubur
-      </h1>
-      <h2
-        class="animated-element fade-bottom text-xl font-light text-white/70 delay-100"
+      Welcome to Bubur
+    </h1>
+    <h2
+      class="animated-element fade-bottom text-xl font-light text-white/70 delay-100"
+    >
+      Come and eat well with our delicious & healthy foods.
+    </h2>
+    ${dialog}
+    <div class="animated-element fade-bottom delay-200">
+      <button
+        id="reservation-open-button"
+        class="border-2 border-white/80 px-8 py-4 font-poppins text-white transition-colors
+               duration-200 hover:border-white hover:bg-white hover:text-black"
       >
-        Come and eat well with our delicious & healthy foods.
-      </h2>
-      ${dialog}
-      <div class="animated-element fade-bottom delay-200">
-        <button
-          id="reservation-open-button"
-          class="border-2 border-white px-8 py-4 font-poppins transition-colors
-                 duration-200 hover:bg-white hover:text-black"
-        >
-          Reservation
-        </button>
-      </div>
+        Reservation
+      </button>
     </div>
   </section>
 `;

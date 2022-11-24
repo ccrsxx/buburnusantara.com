@@ -11,13 +11,15 @@ const navLinks = [
 
 body.innerHTML += html`
   <header id="navbar" class="navbar">
-    <a class="text-xl tracking-widest" href="#">BUBUR</a>
-    <nav id="nav-link-container" class="flex gap-8">
-      ${navLinks.reduce(
-        (acc, { name, href }) =>
-          acc + html` <a class="nav-link" href="${href}">${name}</a>`,
-        ''
-      )}
-    </nav>
+    <div class="flex w-full max-w-6xl items-center justify-between">
+      <a class="text-xl tracking-widest" href="#">BUBUR</a>
+      <nav id="nav-link-container" class="flex gap-8">
+        ${navLinks.reduce(
+          (acc, { name, href }) =>
+            acc + html`<a class="nav-link" href="${href}">${name}</a>`,
+          ''
+        )}
+      </nav>
+    </div>
   </header>
 `;
