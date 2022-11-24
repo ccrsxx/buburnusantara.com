@@ -1,14 +1,8 @@
 import { html } from '../lib/utils';
 import { main } from './main';
+import type { Product } from '../lib/types/product';
 
-type Offer = {
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-};
-
-const offers: Readonly<Offer[]> = [
+const offers: Readonly<Product[]> = [
   {
     name: 'Eggs with Garlic',
     price: 29.5,
@@ -34,7 +28,7 @@ const offers: Readonly<Offer[]> = [
 
 const placeholderOffers = [...(Array(3) as undefined[])].reduce(
   (acc) => [...acc, ...offers],
-  [] as Offer[]
+  [] as Product[]
 );
 
 main.innerHTML += html`
