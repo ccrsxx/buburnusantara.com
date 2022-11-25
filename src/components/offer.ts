@@ -1,6 +1,6 @@
-import { html } from '../lib/utils';
-import { OfferCard } from './core/offer-card';
-import type { Product } from '../lib/types/product';
+import { html } from '@lib/utils';
+import { OfferCard } from './common/offer-card';
+import type { Product } from '@lib/types/product';
 
 const offers: Readonly<Product[]> = [
   {

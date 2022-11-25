@@ -1,4 +1,4 @@
-import { html } from '../lib/utils';
+import { html } from '@lib/utils';
 
 const navLinks = [
   { name: 'Home', href: '#home' },

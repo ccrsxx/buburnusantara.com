@@ -1,6 +1,6 @@
 import toast from 'sweetalert2';
-import { Spinner } from '../components/core/spinner';
-import { sendEmail } from '../lib/mail';
+import { Spinner } from '@components/common/spinner';
+import { sendEmail } from '@lib/mail';
 import {
   reservationForm,
   reservationModal,
@@ -8,8 +8,8 @@ import {
   reservationCloseButton,
   reservationSubmitButton,
   reservationModalBackdrop
-} from '../lib/elements';
-import type { Reservation } from '../lib/types/reservation';
+} from '@lib/elements';
+import type { Reservation } from '@lib/types/reservation';
 
 reservationOpenButton.addEventListener('click', handleReservationButtonOpen);
 reservationCloseButton.addEventListener('click', handleReservationDialogClose);

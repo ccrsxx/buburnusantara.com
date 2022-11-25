@@ -1,5 +1,5 @@
-import { html } from '../lib/utils';
-import { ReservationModal } from './core/reservation-modal';
+import { html } from '@lib/utils';
+import { ReservationModal } from './common/reservation-modal';
 
 export function Home(): string {
   return html`

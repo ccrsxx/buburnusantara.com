@@ -1,6 +1,6 @@
-import { html } from '../../lib/utils';
-import { formatCurrency } from '../../lib/format';
-import type { Product } from '../../lib/types/product';
+import { html } from '@lib/utils';
+import { formatCurrency } from '@lib/format';
+import type { Product } from '@lib/types/product';
 
 type OfferCardProps = Product & {
   index: number;

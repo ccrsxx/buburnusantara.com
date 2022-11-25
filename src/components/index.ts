@@ -1,4 +1,4 @@
-import { html } from '../lib/utils';
+import { html } from '@lib/utils';
 
 import { Navbar } from './navbar';
 import { Home } from './home';
@@ -7,7 +7,7 @@ import { Offer } from './offer';
 import { Menu } from './menu';
 import { Gallery } from './gallery';
 
-export function Index(): string {
+function Index(): string {
   // prettier-ignore
   return html`
     ${Navbar()}

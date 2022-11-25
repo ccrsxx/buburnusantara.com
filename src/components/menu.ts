@@ -1,8 +1,8 @@
-import { html } from '../lib/utils';
-import { MenuButton } from './core/menu-button';
-import { ProductCategory } from './core/product-category';
-import type { Menu } from '../lib/types/menu';
-import type { Product } from '../lib/types/product';
+import { html } from '@lib/utils';
+import { MenuButton } from './common/menu-button';
+import { ProductCategory } from './common/product-category';
+import type { Menu } from '@lib/types/menu';
+import type { Product } from '@lib/types/product';
 
 const menus: Readonly<Menu[]> = ['breakfast', 'lunch', 'dinner'];
 

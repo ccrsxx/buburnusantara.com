@@ -1,4 +1,4 @@
-import { html } from '../lib/utils';
+import { html } from '@lib/utils';
 
 export function About(): string {
   return html`

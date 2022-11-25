@@ -1,7 +1,7 @@
-import { html } from '../../lib/utils';
-import { formatCurrency } from '../../lib/format';
-import type { Menu } from '../../lib/types/menu';
-import type { Product } from '../../lib/types/product';
+import { html } from '@lib/utils';
+import { formatCurrency } from '@lib/format';
+import type { Menu } from '@lib/types/menu';
+import type { Product } from '@lib/types/product';
 
 type ProductCategoryProps = {
   category: Menu;

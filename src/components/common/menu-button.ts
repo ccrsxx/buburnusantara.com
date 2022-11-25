@@ -1,4 +1,4 @@
-import { html } from '../../lib/utils';
+import { html } from '@lib/utils';
 
 type MenuButtonProps = {
   menu: string;
@@ -12,7 +12,7 @@ export function MenuButton({ menu, index }: MenuButtonProps): string {
     <button
       id=${menu}
       class="menu-button animated-element fade-bottom
-                  ${!indexOfThree
+       ${!indexOfThree
         ? 'delay-100'
         : indexOfThree === 1
         ? 'delay-200'
