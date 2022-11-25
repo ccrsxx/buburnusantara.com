@@ -2,12 +2,17 @@ const navLinks = document.querySelectorAll('.nav-link');
 const hiddenSections = document.querySelectorAll('.hidden-section');
 const menuButtons = document.querySelectorAll('.menu-button');
 
-const menuCategories: NodeListOf<HTMLElement> =
+const viewableImages: NodeListOf<HTMLImageElement> =
+  document.querySelectorAll('.viewable-image');
+
+const imageModalLinks: NodeListOf<HTMLAnchorElement> =
+  document.querySelectorAll('.image-modal-link');
+
+const menuCategories: NodeListOf<HTMLDivElement> =
   document.querySelectorAll('.menu-category');
 
 const navbar = document.getElementById('navbar') as HTMLElement;
 const mainTitle = document.getElementById('home') as HTMLElement;
-const menuContainer = document.getElementById('menu-container') as HTMLElement;
 
 const reservationModal = document.getElementById(
   'reservation-modal'
@@ -33,16 +38,30 @@ const reservationSubmitButton = document.getElementById(
   'reservation-submit-button'
 ) as HTMLButtonElement;
 
+const imageModal = document.getElementById('image-modal') as HTMLDialogElement;
+
+const imageModalBackdrop = document.getElementById(
+  'image-modal-backdrop'
+) as HTMLDivElement;
+
+const imageModalImage = document.getElementById(
+  'image-modal-image'
+) as HTMLImageElement;
+
 export {
   navbar,
   navLinks,
   mainTitle,
+  imageModal,
   menuButtons,
-  menuContainer,
+  viewableImages,
   menuCategories,
   hiddenSections,
+  imageModalImage,
+  imageModalLinks,
   reservationForm,
   reservationModal,
+  imageModalBackdrop,
   reservationOpenButton,
   reservationCloseButton,
   reservationSubmitButton,

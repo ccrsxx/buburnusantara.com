@@ -25,7 +25,11 @@ export function OfferCard({
         : 'delay-300'}
         opacity-100"
     >
-      <img class="h-52 w-full rounded-t-md" src="${image}" alt="${name}" />
+      <img
+        class="viewable-image h-52 w-full rounded-t-md"
+        src="${image}"
+        alt="${name}"
+      />
       <div class="grid gap-2 p-8 text-center">
         <h5 class="font-poppins text-xl text-[#FDA403]">
           ${formatCurrency(price)}

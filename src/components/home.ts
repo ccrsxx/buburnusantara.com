@@ -1,5 +1,4 @@
 import { html } from '@lib/utils';
-import { ReservationModal } from './common/reservation-modal';
 
 export function Home(): string {
   return html`
@@ -19,7 +18,6 @@ export function Home(): string {
       >
         Come and eat well with our delicious & healthy foods.
       </h2>
-      ${ReservationModal()}
       <div class="animated-element fade-bottom delay-200">
         <button
           id="reservation-open-button"

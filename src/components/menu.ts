@@ -1,6 +1,6 @@
 import { html } from '@lib/utils';
 import { MenuButton } from './common/menu-button';
-import { ProductCategory } from './common/product-category';
+import { ProductsCategory } from './common/products-category';
 import type { Menu } from '@lib/types/menu';
 import type { Product } from '@lib/types/product';
 
@@ -83,7 +83,7 @@ export function Menu(): string {
       <div>
         ${allMenus.reduce(
           (acc, { category, products }) =>
-            acc + ProductCategory({ category, products }),
+            acc + ProductsCategory({ category, products }),
           ''
         )}
       </div>

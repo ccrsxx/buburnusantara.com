@@ -6,6 +6,8 @@ import { About } from './about';
 import { Offer } from './offer';
 import { Menu } from './menu';
 import { Gallery } from './gallery';
+import { ReservationModal } from './modal/reservation-modal';
+import { ImageModal } from './modal/image-modal';
 
 function Index(): string {
   // prettier-ignore
@@ -18,6 +20,8 @@ function Index(): string {
       ${Menu()}
       ${Gallery()}
     </main>
+    ${ReservationModal()}
+    ${ImageModal()}
   `;
 }
 

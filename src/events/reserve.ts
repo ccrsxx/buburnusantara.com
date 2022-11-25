@@ -13,7 +13,9 @@ import type { Reservation } from '@lib/types/reservation';
 
 reservationOpenButton.addEventListener('click', handleReservationButtonOpen);
 reservationCloseButton.addEventListener('click', handleReservationDialogClose);
+
 reservationModal.addEventListener('click', handleReservationDialogClose);
+reservationModal.addEventListener('cancel', handleReservationDialogClose);
 
 reservationForm.addEventListener('submit', handleReservationSubmit);
 
@@ -22,6 +24,7 @@ async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
 
   reservationSubmitButton.innerHTML = Spinner();
   reservationSubmitButton.disabled = true;
+  reservationSubmitButton.style.cursor = 'loading';
 
   const formData = new FormData(reservationForm);
   const reservation = Object.fromEntries(formData) as Reservation;
@@ -34,6 +37,7 @@ async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
 
   reservationSubmitButton.innerHTML = 'Reserve Now';
   reservationSubmitButton.disabled = false;
+  reservationSubmitButton.style.cursor = '';
 
   await toast.fire({
     icon: 'success',
@@ -49,8 +53,9 @@ function handleReservationButtonOpen(): void {
   reservationModal.showModal();
 }
 
-function handleReservationDialogClose(e?: MouseEvent): void {
-  const isNotACloseButton = e && e.target !== reservationCloseButton;
+function handleReservationDialogClose(e?: MouseEvent | Event): void {
+  const isNotACloseButton =
+    e && 'clientX' in e && e.target !== reservationCloseButton;
 
   if (isNotACloseButton) {
     const { clientX, clientY } = e;

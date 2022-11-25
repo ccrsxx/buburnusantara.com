@@ -2,7 +2,7 @@ import { html } from '@lib/utils';
 
 type ProductImage = Record<'name' | 'image', string>;
 
-const productImages: ProductImage[] = [
+const productImages: Readonly<ProductImage[]> = [
   {
     name: 'Breakfast 1',
     image: '/assets/menu/breakfast/breakfast-1.webp'
@@ -26,7 +26,7 @@ export function Gallery(): string {
   return html`
     <section
       id="gallery"
-      class="hidden-section grid justify-center gap-8 bg-[#f8f9fa]"
+      class="hidden-section grid justify-center gap-12 bg-[#f8f9fa]"
       data-index="4"
     >
       <div
@@ -48,7 +48,11 @@ export function Gallery(): string {
           (acc, { name, image }) =>
             acc +
             html`
-              <img class="rounded-md object-cover" src=${image} alt=${name} />
+              <img
+                class="viewable-image cursor-pointer rounded-md"
+                src="${image}"
+                alt="${name}"
+              />
             `,
           ''
         )}

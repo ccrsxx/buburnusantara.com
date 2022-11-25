@@ -10,7 +10,7 @@ export function MenuButton({ menu, index }: MenuButtonProps): string {
 
   return html`
     <button
-      id=${menu}
+      id="${menu}"
       class="menu-button animated-element fade-bottom
        ${!indexOfThree
         ? 'delay-100'

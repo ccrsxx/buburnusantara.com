@@ -30,7 +30,7 @@ export function About(): string {
           </p>
         </div>
         <img
-          class="animated-element fade-right h-96 w-[576px] rounded-md"
+          class="animated-element fade-right viewable-image h-96 w-[576px] rounded-md duration-500"
           src="/assets/about-chef.webp"
           alt="Chef"
         />

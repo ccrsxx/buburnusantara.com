@@ -8,7 +8,7 @@ type ProductCategoryProps = {
   products: Product[];
 };
 
-export function ProductCategory({
+export function ProductsCategory({
   category,
   products
 }: ProductCategoryProps): string {
@@ -23,7 +23,11 @@ export function ProductCategory({
           acc +
           html`
             <div class="grid grid-cols-[auto,1fr] gap-4">
-              <img class="h-28 w-28 rounded-full" src=${image} alt=${name} />
+              <img
+                class="viewable-image h-28 w-28 rounded-full"
+                src="${image}"
+                alt="${name}"
+              />
               <div class="grid gap-2">
                 <h6 class="font-poppins text-xl font-bold text-black">
                   ${name}

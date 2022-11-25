@@ -35,7 +35,7 @@ export function Offer(): string {
   return html`
     <section
       id="offer"
-      class="hidden-section grid gap-8 bg-[#f8f9fa]"
+      class="hidden-section grid gap-12 bg-[#f8f9fa]"
       data-index="2"
     >
       <div

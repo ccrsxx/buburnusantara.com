@@ -7,19 +7,40 @@
 
 @layer base {
   dialog {
-    @apply pointer-events-none fixed inset-0 mx-auto translate-y-48 opacity-0 transition duration-500;
+    @apply pointer-events-none fixed inset-0 z-50 mx-auto grid place-items-center 
+           bg-transparent p-0 opacity-0 transition;
   }
 
   dialog[open] {
-    @apply pointer-events-auto translate-y-0 bg-transparent opacity-100;
+    @apply pointer-events-auto opacity-100;
   }
 
-  .reservation-modal-backdrop {
-    @apply pointer-events-none fixed inset-0 bg-transparent transition duration-500;
+  #reservation-modal {
+    @apply translate-y-48 duration-500;
   }
 
-  .reservation-modal-backdrop.active {
-    @apply bg-black/40;
+  #reservation-modal[open] {
+    @apply translate-y-0;
+  }
+
+  #image-modal {
+    @apply scale-[0.8] duration-300;
+  }
+
+  #image-modal[open] {
+    @apply scale-100;
+  }
+
+  .modal-backdrop {
+    @apply pointer-events-none fixed inset-0 z-40 bg-transparent transition duration-500;
+  }
+
+  .viewable-image {
+    @apply cursor-pointer transition hover:brightness-75 hover:duration-200;
+  }
+
+  .modal-backdrop.active {
+    @apply bg-black/50;
   }
 
   section {
@@ -65,7 +86,8 @@
   }
 
   .menu-button {
-    @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] transition duration-200 hover:brightness-75;
+    @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] 
+           transition duration-200 hover:brightness-75 hover:delay-[0ms];
   }
 
   .menu-button.active {
