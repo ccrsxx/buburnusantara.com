@@ -1,6 +1,5 @@
 import { html } from '../lib/utils';
 import { formatCurrency } from '../lib/format';
-import { main } from './main';
 import type { Product } from '../lib/types/product';
 
 const offers: Readonly<Product[]> = [
@@ -32,67 +31,69 @@ const placeholderOffers = [...(Array(3) as undefined[])].reduce(
   [] as Product[]
 );
 
-main.innerHTML += html`
-  <section
-    id="offer"
-    class="hidden-section grid gap-8 bg-[#f8f9fa]"
-    data-index="2"
-  >
-    <div
-      class="animated-element fade-bottom grid gap-4 text-center 
-             [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+export function Offer(): string {
+  return html`
+    <section
+      id="offer"
+      class="hidden-section grid gap-8 bg-[#f8f9fa]"
+      data-index="2"
     >
-      <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
-      <h2 class="font-poppins text-6xl font-bold text-black">
-        Our Offer This Summer
-      </h2>
-      <p class="max-w-2xl justify-self-center text-xl font-light">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        aliquid unde rem odio dolor quae illum reiciendis quia similique
-        voluptates in, eos optio voluptatem. Dolorum quis eaque delectus nostrum
-        nemo.
-      </p>
-    </div>
-    <div class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12">
-      <div class="swiper-wrapper cursor-grab select-none">
-        ${placeholderOffers.reduce(
-          (acc, { name, price, image, description }, index) => {
-            const indexOfThree = index % 3;
-
-            return (
-              acc +
-              html`
-                <div
-                  class="swiper-slide animated-element fade-bottom
-                  ${!indexOfThree
-                    ? 'delay-100'
-                    : indexOfThree === 1
-                    ? 'delay-200'
-                    : 'delay-300'}
-                  opacity-100"
-                >
-                  <img
-                    class="h-52 w-full rounded-t-md"
-                    src="${image}"
-                    alt="${name}"
-                  />
-                  <div class="grid gap-2 p-8 text-center">
-                    <h5 class="font-poppins text-xl text-[#FDA403]">
-                      ${formatCurrency(price)}
-                    </h5>
-                    <h5 class="font-poppins text-2xl font-bold text-black">
-                      ${name}
-                    </h5>
-                    <p>${description}</p>
-                  </div>
-                </div>
-              `
-            );
-          },
-          ''
-        )}
+      <div
+        class="animated-element fade-bottom grid gap-4 text-center 
+             [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+      >
+        <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
+        <h2 class="font-poppins text-6xl font-bold text-black">
+          Our Offer This Summer
+        </h2>
+        <p class="max-w-2xl justify-self-center text-xl font-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          aliquid unde rem odio dolor quae illum reiciendis quia similique
+          voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
+          nostrum nemo.
+        </p>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-`;
+      <div class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12">
+        <div class="swiper-wrapper cursor-grab select-none">
+          ${placeholderOffers.reduce(
+            (acc, { name, price, image, description }, index) => {
+              const indexOfThree = index % 3;
+
+              return (
+                acc +
+                html`
+                  <div
+                    class="swiper-slide animated-element fade-bottom
+                  ${!indexOfThree
+                      ? 'delay-100'
+                      : indexOfThree === 1
+                      ? 'delay-200'
+                      : 'delay-300'}
+                  opacity-100"
+                  >
+                    <img
+                      class="h-52 w-full rounded-t-md"
+                      src="${image}"
+                      alt="${name}"
+                    />
+                    <div class="grid gap-2 p-8 text-center">
+                      <h5 class="font-poppins text-xl text-[#FDA403]">
+                        ${formatCurrency(price)}
+                      </h5>
+                      <h5 class="font-poppins text-2xl font-bold text-black">
+                        ${name}
+                      </h5>
+                      <p>${description}</p>
+                    </div>
+                  </div>
+                `
+              );
+            },
+            ''
+          )}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  `;
+}

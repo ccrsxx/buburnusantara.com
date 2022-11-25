@@ -1,5 +1,5 @@
 import toast from 'sweetalert2';
-import { spinnerIcon } from '../components/ui/spinner';
+import { spinnerIcon } from '../components/core/spinner';
 import { sendEmail } from '../lib/mail';
 import {
   reservationForm,
