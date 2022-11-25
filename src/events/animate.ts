@@ -10,7 +10,7 @@ const hiddenSectionsObserver = new IntersectionObserver(
 
       const navElement = navLinks[sectionIndex];
 
-      const sectionAnimatedElements =
+      const sectionAnimatedElements: NodeListOf<HTMLElement> =
         sectionElement.querySelectorAll('.animated-element');
 
       if (entry.isIntersecting) {
@@ -21,8 +21,8 @@ const hiddenSectionsObserver = new IntersectionObserver(
 
         navElement.classList.add('active');
 
-        sectionAnimatedElements.forEach((element) =>
-          element.classList.add('show')
+        sectionAnimatedElements.forEach(
+          (element) => !element.style.display && element.classList.add('show')
         );
       } else {
         navElement.classList.remove('active');

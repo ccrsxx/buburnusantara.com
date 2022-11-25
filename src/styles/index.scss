@@ -11,11 +11,15 @@
   }
 
   dialog[open] {
-    @apply pointer-events-auto translate-y-0 opacity-100;
+    @apply pointer-events-auto translate-y-0 bg-transparent opacity-100;
   }
 
-  dialog::backdrop {
-    @apply bg-black/50;
+  .reservation-modal-backdrop {
+    @apply pointer-events-none fixed inset-0 bg-transparent transition duration-500;
+  }
+
+  .reservation-modal-backdrop.active {
+    @apply bg-black/40;
   }
 
   section {
@@ -66,6 +70,10 @@
 
   .menu-button.active {
     @apply border-black text-black;
+  }
+
+  .menu-category {
+    @apply grid max-w-6xl translate-y-8 grid-cols-2 gap-8 delay-[400ms];
   }
 }
 

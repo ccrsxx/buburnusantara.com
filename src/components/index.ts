@@ -5,6 +5,7 @@ import { Home } from './home';
 import { About } from './about';
 import { Offer } from './offer';
 import { Menu } from './menu';
+import { Gallery } from './gallery';
 
 export function Index(): string {
   // prettier-ignore
@@ -15,8 +16,9 @@ export function Index(): string {
       ${About()}
       ${Offer()}
       ${Menu()}
+      ${Gallery()}
     </main>
   `;
 }
 
-document.body.innerHTML = html`${Index()}`;
+document.body.innerHTML = Index();

@@ -1,9 +1,10 @@
 import { html } from '../lib/utils';
-import { formatCurrency } from '../lib/format';
+import { MenuButton } from './core/menu-button';
+import { ProductCategory } from './core/product-category';
 import type { Menu } from '../lib/types/menu';
 import type { Product } from '../lib/types/product';
 
-const menuButtons: Readonly<Menu[]> = ['breakfast', 'lunch', 'dinner'];
+const menus: Readonly<Menu[]> = ['breakfast', 'lunch', 'dinner'];
 
 const placeholderMenus: Product[] = [
   {
@@ -74,61 +75,15 @@ export function Menu(): string {
         </p>
       </div>
       <div class="flex items-center justify-center gap-4">
-        ${menuButtons.reduce((acc, menuButton, index) => {
-          const indexOfThree = index % 3;
-
-          return (
-            acc +
-            html`
-              <button
-                id=${menuButton}
-                class="menu-button animated-element fade-bottom
-                  ${!indexOfThree
-                  ? 'delay-100'
-                  : indexOfThree === 1
-                  ? 'delay-200'
-                  : 'delay-300'}"
-              >
-                ${menuButton}
-              </button>
-            `
-          );
-        }, '')}
+        ${menus.reduce(
+          (acc, menu, index) => acc + MenuButton({ menu, index }),
+          ''
+        )}
       </div>
-      <div id="menu-container">
-        ${allMenus.slice(0, 1).reduce(
+      <div>
+        ${allMenus.reduce(
           (acc, { category, products }) =>
-            acc +
-            html`
-              <div id=${category} class="grid max-w-6xl grid-cols-2 gap-8">
-                ${products.reduce(
-                  (acc, { name, price, image, description }) =>
-                    acc +
-                    html`
-                      <div
-                        class="fade-bottom animated-element grid 
-                             grid-cols-[auto,1fr] gap-4 delay-[400ms]"
-                      >
-                        <img
-                          class="h-28 w-28 rounded-full"
-                          src=${image}
-                          alt=${name}
-                        />
-                        <div class="grid gap-2">
-                          <h6 class="font-poppins text-xl font-bold text-black">
-                            ${name}
-                          </h6>
-                          <p>${description}</p>
-                          <h5 class="font-poppins text-2xl text-[#FDA403]">
-                            ${formatCurrency(price)}
-                          </h5>
-                        </div>
-                      </div>
-                    `,
-                  ''
-                )}
-              </div>
-            `,
+            acc + ProductCategory({ category, products }),
           ''
         )}
       </div>

@@ -2,13 +2,20 @@ const navLinks = document.querySelectorAll('.nav-link');
 const hiddenSections = document.querySelectorAll('.hidden-section');
 const menuButtons = document.querySelectorAll('.menu-button');
 
+const menuCategories: NodeListOf<HTMLElement> =
+  document.querySelectorAll('.menu-category');
+
 const navbar = document.getElementById('navbar') as HTMLElement;
 const mainTitle = document.getElementById('home') as HTMLElement;
 const menuContainer = document.getElementById('menu-container') as HTMLElement;
 
-const reservationDialog = document.getElementById(
-  'reservation-dialog'
+const reservationModal = document.getElementById(
+  'reservation-modal'
 ) as HTMLDialogElement;
+
+const reservationModalBackdrop = document.getElementById(
+  'reservation-modal-backdrop'
+) as HTMLDivElement;
 
 const reservationForm = document.getElementById(
   'reservation-form'
@@ -32,10 +39,12 @@ export {
   mainTitle,
   menuButtons,
   menuContainer,
+  menuCategories,
   hiddenSections,
   reservationForm,
-  reservationDialog,
+  reservationModal,
   reservationOpenButton,
   reservationCloseButton,
-  reservationSubmitButton
+  reservationSubmitButton,
+  reservationModalBackdrop
 };

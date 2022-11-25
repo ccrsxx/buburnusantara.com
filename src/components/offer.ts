@@ -1,5 +1,5 @@
 import { html } from '../lib/utils';
-import { formatCurrency } from '../lib/format';
+import { OfferCard } from './core/offer-card';
 import type { Product } from '../lib/types/product';
 
 const offers: Readonly<Product[]> = [
@@ -56,39 +56,7 @@ export function Offer(): string {
       <div class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12">
         <div class="swiper-wrapper cursor-grab select-none">
           ${placeholderOffers.reduce(
-            (acc, { name, price, image, description }, index) => {
-              const indexOfThree = index % 3;
-
-              return (
-                acc +
-                html`
-                  <div
-                    class="swiper-slide animated-element fade-bottom
-                  ${!indexOfThree
-                      ? 'delay-100'
-                      : indexOfThree === 1
-                      ? 'delay-200'
-                      : 'delay-300'}
-                  opacity-100"
-                  >
-                    <img
-                      class="h-52 w-full rounded-t-md"
-                      src="${image}"
-                      alt="${name}"
-                    />
-                    <div class="grid gap-2 p-8 text-center">
-                      <h5 class="font-poppins text-xl text-[#FDA403]">
-                        ${formatCurrency(price)}
-                      </h5>
-                      <h5 class="font-poppins text-2xl font-bold text-black">
-                        ${name}
-                      </h5>
-                      <p>${description}</p>
-                    </div>
-                  </div>
-                `
-              );
-            },
+            (acc, product, index) => acc + OfferCard({ ...product, index }),
             ''
           )}
         </div>

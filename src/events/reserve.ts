@@ -1,24 +1,26 @@
 import toast from 'sweetalert2';
-import { spinnerIcon } from '../components/core/spinner';
+import { Spinner } from '../components/core/spinner';
 import { sendEmail } from '../lib/mail';
 import {
   reservationForm,
-  reservationDialog,
+  reservationModal,
   reservationOpenButton,
   reservationCloseButton,
-  reservationSubmitButton
+  reservationSubmitButton,
+  reservationModalBackdrop
 } from '../lib/elements';
 import type { Reservation } from '../lib/types/reservation';
 
 reservationOpenButton.addEventListener('click', handleReservationButtonOpen);
 reservationCloseButton.addEventListener('click', handleReservationDialogClose);
+reservationModal.addEventListener('click', handleReservationDialogClose);
 
 reservationForm.addEventListener('submit', handleReservationSubmit);
 
 async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
   e.preventDefault();
 
-  reservationSubmitButton.innerHTML = spinnerIcon;
+  reservationSubmitButton.innerHTML = Spinner();
   reservationSubmitButton.disabled = true;
 
   const formData = new FormData(reservationForm);
@@ -42,10 +44,31 @@ async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
 
 function handleReservationButtonOpen(): void {
   document.body.style.overflow = 'hidden';
-  reservationDialog.showModal();
+
+  reservationModalBackdrop.classList.add('active');
+  reservationModal.showModal();
 }
 
-function handleReservationDialogClose(): void {
+function handleReservationDialogClose(e?: MouseEvent): void {
+  const isNotACloseButton = e && e.target !== reservationCloseButton;
+
+  if (isNotACloseButton) {
+    const { clientX, clientY } = e;
+
+    const { top, left, width, height } =
+      reservationModal.getBoundingClientRect();
+
+    const isInDialog =
+      top <= clientY &&
+      left <= clientX &&
+      clientX <= left + width &&
+      clientY <= top + height;
+
+    if (isInDialog) return;
+  }
+
   document.body.style.overflow = '';
-  reservationDialog.close();
+
+  reservationModalBackdrop.classList.remove('active');
+  reservationModal.close();
 }
