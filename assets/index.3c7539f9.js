@@ -243,7 +243,7 @@
     <button
       id=${e}
       class="menu-button animated-element fade-bottom
-                  ${t?t===1?"delay-200":"delay-300":"delay-100"}"
+       ${t?t===1?"delay-200":"delay-300":"delay-100"}"
     >
       ${e}
     </button>
