@@ -1,5 +1,5 @@
 import toast from 'sweetalert2';
-import { Spinner } from '@components/common/spinner';
+import { Loading } from '@components/ui/loading';
 import { sendEmail } from '@lib/mail';
 import {
   reservationForm,
@@ -22,9 +22,8 @@ reservationForm.addEventListener('submit', handleReservationSubmit);
 async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
   e.preventDefault();
 
-  reservationSubmitButton.innerHTML = Spinner();
   reservationSubmitButton.disabled = true;
-  reservationSubmitButton.style.cursor = 'loading';
+  reservationSubmitButton.innerHTML = Loading();
 
   const formData = new FormData(reservationForm);
   const reservation = Object.fromEntries(formData) as Reservation;
@@ -35,13 +34,12 @@ async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
 
   reservationForm.reset();
 
-  reservationSubmitButton.innerHTML = 'Reserve Now';
   reservationSubmitButton.disabled = false;
-  reservationSubmitButton.style.cursor = '';
+  reservationSubmitButton.innerHTML = 'Reserve Now';
 
   await toast.fire({
     icon: 'success',
-    title: 'Reservation was sent!',
+    title: 'Your Reservation was sent!',
     text: 'We will get back to you shortly.'
   });
 }
@@ -55,7 +53,10 @@ function handleReservationButtonOpen(): void {
 
 function handleReservationDialogClose(e?: MouseEvent | Event): void {
   const isNotACloseButton =
-    e && 'clientX' in e && e.target !== reservationCloseButton;
+    e &&
+    'clientX' in e &&
+    e.target !== reservationCloseButton &&
+    (e.target as HTMLElement)?.id !== 'x-mark-icon';
 
   if (isNotACloseButton) {
     const { clientX, clientY } = e;

@@ -1,12 +1,11 @@
 import { html } from '@lib/utils';
-import { MenuButton } from './common/menu-button';
 import { ProductsCategory } from './common/products-category';
 import type { Menu } from '@lib/types/menu';
 import type { Product } from '@lib/types/product';
 
 const menus: Readonly<Menu[]> = ['breakfast', 'lunch', 'dinner'];
 
-const placeholderMenus: Product[] = [
+const placeholderMenus: Readonly<Product[]> = [
   {
     name: 'Salted Fried Chicken',
     price: 420_000,
@@ -31,14 +30,13 @@ const placeholderMenus: Product[] = [
 ];
 
 type Category = { category: Menu; products: Product[] };
-type AllMenus = Category[];
 
 const clonedPlaceholderMenus = [...(Array(2) as undefined[])].reduce(
   (acc) => [...acc, ...placeholderMenus],
   [] as Product[]
 );
 
-const allMenus: AllMenus = [
+const allMenus: Readonly<Category[]> = [
   {
     category: 'breakfast',
     products: clonedPlaceholderMenus
@@ -62,7 +60,7 @@ export function Menu(): string {
     >
       <div
         class="animated-element fade-bottom grid content-center gap-4 text-center 
-             [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+               [&>p]:text-lg [&>p]:text-[#b8b8b8]"
       >
         <h2 class="font-poppins text-6xl font-bold text-black">
           Delicious Menu
@@ -75,10 +73,25 @@ export function Menu(): string {
         </p>
       </div>
       <div class="flex items-center justify-center gap-4">
-        ${menus.reduce(
-          (acc, menu, index) => acc + MenuButton({ menu, index }),
-          ''
-        )}
+        ${menus.reduce((acc, menu, index) => {
+          const indexOfThree = index % 3;
+
+          return (
+            acc +
+            html`
+              <div
+                class="animated-element fade-bottom
+                  ${!indexOfThree
+                  ? 'delay-100'
+                  : indexOfThree === 1
+                  ? 'delay-200'
+                  : 'delay-300'}"
+              >
+                <button class="menu-button" id="${menu}">${menu}</button>
+              </div>
+            `
+          );
+        }, '')}
       </div>
       <div>
         ${allMenus.reduce(

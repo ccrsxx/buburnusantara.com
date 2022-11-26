@@ -3,9 +3,9 @@
 }
 
 .swiper-pagination-bullet {
-  @apply h-2.5 w-2.5 #{!important};
+  @apply h-2.5 w-2.5 bg-black opacity-20 transition duration-300 #{!important};
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-[#FDA403] #{!important};
+  @apply bg-[#FDA403] opacity-100 #{!important};
 }

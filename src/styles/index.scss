@@ -15,6 +15,40 @@
     @apply pointer-events-auto opacity-100;
   }
 
+  section {
+    @apply px-16 py-28;
+  }
+
+  #navbar {
+    @apply absolute flex w-full items-center justify-center py-10 px-16 transition-opacity duration-200;
+  }
+
+  #navbar.sleep {
+    @apply transition-all duration-300;
+  }
+
+  #navbar.scrolled-middle {
+    @apply fixed z-10 -mt-32 bg-white/60 py-4 px-8 opacity-0 shadow backdrop-blur-md hover:shadow-lg;
+  }
+
+  #navbar.scrolled-bottom {
+    @apply mt-0 opacity-100;
+
+    * {
+      @apply text-black;
+    }
+
+    nav {
+      .nav-link {
+        @apply hover:text-[#FDA403]/75;
+      }
+
+      .nav-link.active {
+        @apply text-[#FDA403];
+      }
+    }
+  }
+
   #reservation-modal {
     @apply translate-y-48 duration-500;
   }
@@ -35,54 +69,16 @@
     @apply pointer-events-none fixed inset-0 z-40 bg-transparent transition duration-500;
   }
 
-  .viewable-image {
-    @apply cursor-pointer transition hover:brightness-75 hover:duration-200;
-  }
-
   .modal-backdrop.active {
     @apply bg-black/50;
   }
 
-  section {
-    @apply px-16 py-32;
-  }
-
   .nav-link {
-    @apply uppercase tracking-[0.2em] text-white/50 transition hover:text-white/75;
+    @apply uppercase tracking-[0.2em] text-white/50 transition hover:text-white/75 hover:duration-200;
   }
 
   .nav-link.active {
     @apply text-white;
-  }
-
-  .navbar {
-    @apply absolute flex w-full items-center justify-center py-10 px-16 transition-opacity duration-200;
-  }
-
-  .navbar.sleep {
-    @apply transition-all duration-300;
-  }
-
-  .navbar.scrolled-middle {
-    @apply fixed z-10 -mt-32 bg-white py-4 px-8 opacity-0;
-  }
-
-  .navbar.scrolled-bottom {
-    @apply mt-0 opacity-100;
-
-    * {
-      @apply text-black;
-    }
-
-    nav {
-      .nav-link {
-        @apply hover:text-[#FDA403]/75;
-      }
-
-      .nav-link.active {
-        @apply text-[#FDA403];
-      }
-    }
   }
 
   .menu-button {
@@ -96,6 +92,15 @@
 
   .menu-category {
     @apply grid max-w-6xl translate-y-8 grid-cols-2 gap-8 delay-[400ms];
+  }
+
+  .viewable-image {
+    @apply cursor-pointer transition hover:brightness-75 hover:duration-200;
+  }
+
+  .custom-underline {
+    @apply underline decoration-transparent outline-none transition [text-decoration-thickness:1px] 
+           hover:decoration-inherit focus-visible:decoration-inherit;
   }
 }
 

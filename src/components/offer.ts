@@ -40,7 +40,7 @@ export function Offer(): string {
     >
       <div
         class="animated-element fade-bottom grid gap-4 text-center 
-             [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+              [&>p]:text-lg [&>p]:text-[#b8b8b8]"
       >
         <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
         <h2 class="font-poppins text-6xl font-bold text-black">
@@ -53,7 +53,9 @@ export function Offer(): string {
           nostrum nemo.
         </p>
       </div>
-      <div class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12">
+      <div
+        class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12 delay-100"
+      >
         <div class="swiper-wrapper cursor-grab select-none">
           ${placeholderOffers.reduce(
             (acc, product, index) => acc + OfferCard({ ...product, index }),

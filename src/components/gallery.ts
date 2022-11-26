@@ -42,7 +42,7 @@ export function Gallery(): string {
         </p>
       </div>
       <div
-        class="animated-element fade-bottom grid w-full max-w-6xl grid-cols-3 gap-4 delay-200"
+        class="animated-element fade-bottom grid w-full max-w-6xl grid-cols-3 gap-4 delay-100"
       >
         ${placeholderProductImages.reduce(
           (acc, { name, image }) =>

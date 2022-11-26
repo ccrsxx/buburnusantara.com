@@ -1,7 +1,9 @@
 import { menuButtons, menuCategories } from '../lib/elements';
 import type { Menu } from '../lib/types/menu';
 
-let currentMenu: Menu = 'breakfast';
+const cachedCurrentMenu = localStorage.getItem('currentMenu') as Menu;
+
+let currentMenu: Menu = cachedCurrentMenu ?? 'breakfast';
 let prevMenu: Menu;
 
 highlightMenuButton(currentMenu);
@@ -18,6 +20,8 @@ function handleChangeMenu(menuId: Menu) {
 
     prevMenu = currentMenu;
     currentMenu = menuId;
+
+    localStorage.setItem('currentMenu', currentMenu);
 
     highlightMenuButton(menuId);
     toggleMenuCategory(menuId);

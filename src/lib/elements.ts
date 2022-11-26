@@ -48,11 +48,18 @@ const imageModalImage = document.getElementById(
   'image-modal-image'
 ) as HTMLImageElement;
 
+const contactForm = document.getElementById('contact-form') as HTMLFormElement;
+
+const contactSubmitButton = document.getElementById(
+  'contact-submit-button'
+) as HTMLButtonElement;
+
 export {
   navbar,
   navLinks,
   mainTitle,
   imageModal,
+  contactForm,
   menuButtons,
   viewableImages,
   menuCategories,
@@ -62,6 +69,7 @@ export {
   reservationForm,
   reservationModal,
   imageModalBackdrop,
+  contactSubmitButton,
   reservationOpenButton,
   reservationCloseButton,
   reservationSubmitButton,
