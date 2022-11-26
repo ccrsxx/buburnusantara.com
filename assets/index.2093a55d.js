@@ -351,12 +351,14 @@
             rows="7"
             class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
             placeholder=" "
+            required
           ></textarea>`:O`<input
             class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
             id="${e}"
             name="${e}"
             type="${s!=null?s:"text"}"
             placeholder=" "
+            required
           />`}
       <label
         for="${e}"
