@@ -1,13 +1,19 @@
-import { userId, serviceId, templateId } from './env';
+import {
+  userId,
+  serviceId,
+  messageTemplateId,
+  reservationTemplateId
+} from './env';
 import type { Reservation } from './types/reservation';
-import type { Body } from './types/body';
+import type { Message } from './types/message';
+import type { Email } from './types/body';
 
-export async function sendEmail(reservation: Reservation): Promise<void> {
-  const data: Body = {
+export async function sendEmail(data: Reservation | Message): Promise<void> {
+  const email: Email = {
     user_id: userId,
     service_id: serviceId,
-    template_id: templateId,
-    template_params: reservation
+    template_id: 'name' in data ? messageTemplateId : reservationTemplateId,
+    template_params: data
   };
 
   await fetch('https://api.emailjs.com/api/v1.0/email/send', {
@@ -16,6 +22,6 @@ export async function sendEmail(reservation: Reservation): Promise<void> {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(email)
   });
 }

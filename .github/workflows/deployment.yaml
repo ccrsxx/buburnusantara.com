@@ -49,9 +49,10 @@ jobs:
       - name: ⚒️ Build
         run: npm run build
         env:
-          VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
-          VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
           VITE_USER_ID: ${{ secrets.VITE_USER_ID }}
+          VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
+          VITE_MESSAGE_TEMPLATE_ID: ${{ secrets.VITE_MESSAGE_TEMPLATE_ID }}
+          VITE_RESERVATION_TEMPLATE_ID: ${{ secrets.VITE_RESERVATION_TEMPLATE_ID }}
 
       - name: ✈️ Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
