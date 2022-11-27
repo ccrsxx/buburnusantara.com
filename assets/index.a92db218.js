@@ -377,21 +377,25 @@
     <div
       class="${o!=null?o:""} relative rounded ring-2 ring-slate-200 transition-shadow duration-200 focus-within:ring-blue-400"
     >
-      ${a?I`<textarea
-            id="${e}"
-            name="${e}"
-            rows="7"
-            class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
-            placeholder=" "
-            required
-          ></textarea>`:I`<input
-            class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
-            id="${e}"
-            name="${e}"
-            type="${s!=null?s:"text"}"
-            placeholder=" "
-            required
-          />`}
+      ${a?I`
+            <textarea
+              id="${e}"
+              name="${e}"
+              rows="7"
+              class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
+              placeholder=" "
+              required
+            ></textarea>
+          `:I`
+            <input
+              class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
+              id="${e}"
+              name="${e}"
+              type="${s!=null?s:"text"}"
+              placeholder=" "
+              required
+            />
+          `}
       <label
         for="${e}"
         class="bg-main-background text-light-secondary dark:text-dark-secondary absolute left-4 translate-y-1
@@ -491,24 +495,43 @@
         Copyright &copy; 2022 ccrsxx. All rights reserved.
       </p>
     </footer>
-  `}function Xo({id:e,type:s,style:t,label:o,useTextArea:a}){return I`
+  `}function Xo({id:e,type:s,style:t,label:o,useSelect:a,useTextArea:r}){return I`
     <div class="${t!=null?t:""} grid gap-1">
       <label class="self-start" for="${e}">${o}</label>
-      ${a?I`<textarea
-            id="${e}"
-            name="${e}"
-            rows="7"
-            class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
-            required
-          ></textarea>`:I`<input
-            id="${e}"
-            type="${s!=null?s:"text"}"
-            name="${e}"
-            class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
-            required
-          />`}
+      ${a?I`
+            <select
+              class="smooth-tab rounded-md bg-white p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
+              name="${e}"
+              id="${e}"
+              required
+            >
+              <option value="" selected disabled hidden>
+                Choose many people
+              </option>
+              <option value="1">1 People</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4+ People</option>
+            </select>
+          `:r?I`
+            <textarea
+              id="${e}"
+              name="${e}"
+              rows="7"
+              class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
+              required
+            ></textarea>
+          `:I`
+            <input
+              id="${e}"
+              type="${s!=null?s:"text"}"
+              name="${e}"
+              class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
+              required
+            />
+          `}
     </div>
-  `}const Uo=[{id:"firstName",label:"First Name"},{id:"lastName",label:"Last Name"},{id:"email",type:"email",label:"Email",style:"col-span-2"},{id:"phone",type:"tel",label:"Phone"},{id:"date",type:"date",label:"Date"},{id:"time",type:"time",label:"Time"},{id:"message",label:"Message",style:"col-span-2",useTextArea:!0}];function Ko(){return I`
+  `}const Uo=[{id:"firstName",label:"First Name"},{id:"lastName",label:"Last Name"},{id:"email",type:"email",label:"Email",style:"col-span-2"},{id:"people",label:"How Many People",useSelect:!0},{id:"phone",type:"tel",label:"Phone"},{id:"date",type:"date",label:"Date"},{id:"time",type:"time",label:"Time"},{id:"message",label:"Message",style:"col-span-2",useTextArea:!0}];function Ko(){return I`
     <div>
       <div id="reservation-modal-backdrop" class="modal-backdrop"></div>
       <dialog id="reservation-modal">
@@ -524,23 +547,6 @@
             class="grid grid-cols-2 gap-4 font-poppins"
           >
             ${Uo.reduce((e,s)=>e+Xo(s),"")}
-            <div class="row-start-3 grid gap-1">
-              <label class="self-start" for="people">How Many People</label>
-              <select
-                class="smooth-tab h-full rounded-md bg-white p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
-                name="people"
-                id="people"
-                required
-              >
-                <option value="" selected disabled hidden>
-                  Choose many people
-                </option>
-                <option value="1">1 People</option>
-                <option value="2">2 People</option>
-                <option value="3">3 People</option>
-                <option value="4">4+ People</option>
-              </select>
-            </div>
             <button
               id="reservation-submit-button"
               class="smooth-tab col-span-2 rounded-md bg-yellow-400 p-2 text-white transition duration-200 
