@@ -8,7 +8,6 @@ A landing page for Bubur Nusantara restaurant built with TypeScript, Tailwind CS
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Sass](https://sass-lang.com/)
-- [SweetAlert2](https://sweetalert2.github.io/)
 - [Swiper](https://swiperjs.com/)
 
 ## Getting Started

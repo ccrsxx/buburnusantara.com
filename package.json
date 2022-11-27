@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "sass": "^1.56.1",
-    "sweetalert2": "^11.6.9",
     "swiper": "^8.4.4"
   }
 }
