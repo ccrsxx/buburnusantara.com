@@ -51,15 +51,15 @@ export function ReservationModal(): string {
     <div>
       <div id="reservation-modal-backdrop" class="modal-backdrop"></div>
       <dialog id="reservation-modal">
-        <div class="grid w-screen max-w-3xl gap-4 rounded-md bg-white p-4">
+        <div class="w-screen max-w-3xl flex-col gap-4 rounded-md bg-white p-4">
           <button
-            id="reservation-close-button"
+            id="reservation-modal-close-button"
             class="ml-auto flex gap-1 text-black/50 transition-colors duration-200 hover:text-black"
           >
             CLOSE ${CustomIcon({ iconName: 'XMarkIcon' })}
           </button>
           <form
-            id="reservation-form"
+            id="reservation-modal-form"
             class="grid grid-cols-2 gap-4 font-poppins"
           >
             ${reservationInputFields.reduce(
@@ -67,7 +67,7 @@ export function ReservationModal(): string {
               ''
             )}
             <button
-              id="reservation-submit-button"
+              id="reservation-modal-submit-button"
               class="smooth-tab col-span-2 rounded-md bg-yellow-400 p-2 text-white transition duration-200 
                      hover:brightness-90 disabled:cursor-wait disabled:brightness-90"
             >

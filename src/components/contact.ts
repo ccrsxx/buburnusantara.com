@@ -18,40 +18,28 @@ const contactInfos: Readonly<ContactInfo[]> = [
     iconName: 'MapPinIcon'
   },
   {
-    href: 'tel:+6281234567890',
-    style: 'hover:bg-green-400',
-    title: 'Phone',
-    iconName: 'PhoneIcon'
-  },
-  {
-    href: 'https://wa.me/6281234567890',
-    style: 'hover:bg-green-400',
-    title: 'WhatsApp',
-    iconName: 'WhatsAppIcon'
-  },
-  {
-    href: 'https://www.instagram.com/buburnusantara',
-    style: 'hover:bg-rose-400',
-    title: 'Instagram',
-    iconName: 'InstagramIcon'
-  },
-  {
     href: 'mailto:site@buburnusantara.com',
     style: 'hover:bg-blue-400',
     title: 'Email',
     iconName: 'AtIcon'
   },
   {
-    href: 'https://twitter.com/buburnusantara',
-    style: 'hover:bg-blue-400',
-    title: 'Twitter',
-    iconName: 'TwitterIcon'
+    href: 'tel:+6285692807048',
+    style: 'hover:bg-green-400',
+    title: 'Phone',
+    iconName: 'PhoneIcon'
   },
   {
-    href: 'https://www.facebook.com/buburnusantara',
-    style: 'hover:bg-blue-400',
-    title: 'Facebook',
-    iconName: 'FacebookIcon'
+    href: 'https://www.instagram.com/buburnusantara.id',
+    style: 'hover:bg-rose-400',
+    title: 'Instagram',
+    iconName: 'InstagramIcon'
+  },
+  {
+    href: 'https://wa.me/6285692807048',
+    style: 'hover:bg-green-400',
+    title: 'WhatsApp',
+    iconName: 'WhatsAppIcon'
   }
 ];
 

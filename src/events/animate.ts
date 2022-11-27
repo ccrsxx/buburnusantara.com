@@ -40,6 +40,8 @@ const hiddenSectionsObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
+// TODO: Show navbar when sleep state is removed from navbar
+
 const mainTitleObserver = new IntersectionObserver(
   (entries) =>
     entries.forEach(({ isIntersecting }) => {

@@ -1,77 +1,71 @@
-import toast from 'sweetalert2';
 import { Loading } from '@components/ui/loading';
 import { sendEmail } from '@lib/mail';
 import {
-  reservationForm,
   reservationModal,
-  reservationOpenButton,
-  reservationCloseButton,
-  reservationSubmitButton,
-  reservationModalBackdrop
+  reservationModalForm,
+  reservationModalBackdrop,
+  reservationModalOpenButton,
+  reservationModalCloseButton,
+  reservationModalSubmitButton
 } from '@lib/elements';
+import { isInDialog } from '@lib/utils';
+import { toastFire } from '@lib/toast';
 import type { Reservation } from '@lib/types/reservation';
 
-reservationOpenButton.addEventListener('click', handleReservationButtonOpen);
-reservationCloseButton.addEventListener('click', handleReservationDialogClose);
+reservationModalOpenButton.addEventListener(
+  'click',
+  handleReservationModalOpen
+);
 
-reservationModal.addEventListener('click', handleReservationDialogClose);
-reservationModal.addEventListener('cancel', handleReservationDialogClose);
+reservationModalCloseButton.addEventListener(
+  'click',
+  handleReservationModalClose
+);
 
-reservationForm.addEventListener('submit', handleReservationSubmit);
+reservationModal.addEventListener('click', handleReservationModalClose);
+reservationModal.addEventListener('cancel', handleReservationModalClose);
+
+reservationModalForm.addEventListener('submit', handleReservationSubmit);
 
 async function handleReservationSubmit(e: SubmitEvent): Promise<void> {
   e.preventDefault();
 
-  reservationSubmitButton.disabled = true;
-  reservationSubmitButton.innerHTML = Loading();
+  reservationModalSubmitButton.disabled = true;
+  reservationModalSubmitButton.innerHTML = Loading();
 
-  const formData = new FormData(reservationForm);
+  const formData = new FormData(reservationModalForm);
   const reservation = Object.fromEntries(formData) as Reservation;
 
   await sendEmail(reservation);
 
-  handleReservationDialogClose();
+  handleReservationModalClose();
 
-  reservationForm.reset();
+  reservationModalForm.reset();
 
-  reservationSubmitButton.disabled = false;
-  reservationSubmitButton.innerHTML = 'Reserve Now';
+  reservationModalSubmitButton.disabled = false;
+  reservationModalSubmitButton.innerHTML = 'Reserve Now';
 
-  await toast.fire({
-    icon: 'success',
+  await toastFire({
     title: 'Your Reservation was sent!',
-    text: 'We will get back to you shortly.'
+    delay: 300,
+    description: 'We will get back to you shortly.'
   });
 }
 
-function handleReservationButtonOpen(): void {
+function handleReservationModalOpen(): void {
   document.body.style.overflow = 'hidden';
 
   reservationModalBackdrop.classList.add('active');
   reservationModal.showModal();
 }
 
-function handleReservationDialogClose(e?: MouseEvent | Event): void {
+function handleReservationModalClose(e?: MouseEvent | Event): void {
   const isNotACloseButton =
     e &&
-    'clientX' in e &&
-    e.target !== reservationCloseButton &&
+    e.target !== reservationModalCloseButton &&
     (e.target as HTMLElement)?.id !== 'x-mark-icon';
 
-  if (isNotACloseButton) {
-    const { clientX, clientY } = e;
-
-    const { top, left, width, height } =
-      reservationModal.getBoundingClientRect();
-
-    const isInDialog =
-      top <= clientY &&
-      left <= clientX &&
-      clientX <= left + width &&
-      clientY <= top + height;
-
-    if (isInDialog) return;
-  }
+  if (isNotACloseButton && isInDialog(e, reservationModal)) return;
 
   document.body.style.overflow = '';
 

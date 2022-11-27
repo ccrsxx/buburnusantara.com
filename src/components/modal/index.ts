@@ -1,6 +1,7 @@
 import { html } from '@lib/utils';
-import { ReservationModal } from './reservation-modal';
+import { ToastModal } from './toast-modal';
 import { ImageModal } from './image-modal';
+import { ReservationModal } from './reservation-modal';
 
 export function Modal(): string {
   // prettier-ignore
@@ -8,6 +9,7 @@ export function Modal(): string {
     <modal>
       ${ReservationModal()}
       ${ImageModal()}
+      ${ToastModal()}
     </modal>
   `;
 }

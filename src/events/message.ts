@@ -1,8 +1,8 @@
-import toast from 'sweetalert2';
 import { sendEmail } from '@lib/mail';
 import { contactForm, contactSubmitButton } from '@lib/elements';
 import { CustomIcon } from '@components/ui/custom-icon';
 import { Loading } from '@components/ui/loading';
+import { toastFire } from '@lib/toast';
 import type { Message } from '@lib/types/message';
 
 contactForm.addEventListener('submit', handleContactSubmit);
@@ -28,9 +28,8 @@ async function handleContactSubmit(e: SubmitEvent): Promise<void> {
       iconName: 'PaperAirplaneIcon'
     })}`;
 
-  await toast.fire({
-    icon: 'success',
+  await toastFire({
     title: 'Your Message was sent!',
-    text: 'Thank you for contacting us.'
+    description: 'Thank you for contacting us.'
   });
 }

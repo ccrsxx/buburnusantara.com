@@ -23,20 +23,20 @@ const reservationModalBackdrop = document.getElementById(
   'reservation-modal-backdrop'
 ) as HTMLDivElement;
 
-const reservationForm = document.getElementById(
-  'reservation-form'
+const reservationModalForm = document.getElementById(
+  'reservation-modal-form'
 ) as HTMLFormElement;
 
-const reservationOpenButton = document.getElementById(
-  'reservation-open-button'
+const reservationModalOpenButton = document.getElementById(
+  'reservation-modal-open-button'
 ) as HTMLButtonElement;
 
-const reservationCloseButton = document.getElementById(
-  'reservation-close-button'
+const reservationModalCloseButton = document.getElementById(
+  'reservation-modal-close-button'
 ) as HTMLButtonElement;
 
-const reservationSubmitButton = document.getElementById(
-  'reservation-submit-button'
+const reservationModalSubmitButton = document.getElementById(
+  'reservation-modal-submit-button'
 ) as HTMLButtonElement;
 
 const imageModal = document.getElementById('image-modal') as HTMLDialogElement;
@@ -49,6 +49,22 @@ const imageModalImage = document.getElementById(
   'image-modal-image'
 ) as HTMLImageElement;
 
+const toastModal = document.getElementById('toast-modal') as HTMLDialogElement;
+
+const toastModalBackdrop = document.getElementById(
+  'toast-modal-backdrop'
+) as HTMLDivElement;
+
+const toastModalTitle = document.getElementById(
+  'toast-modal-title'
+) as HTMLElement;
+
+const toastModalDescription = document.getElementById(
+  'toast-modal-description'
+) as HTMLParagraphElement;
+
+const checkmarkIcon = document.getElementById('checkmark-icon') as HTMLElement;
+
 const contactForm = document.getElementById('contact-form') as HTMLFormElement;
 
 const contactSubmitButton = document.getElementById(
@@ -60,19 +76,24 @@ export {
   navLinks,
   mainTitle,
   imageModal,
+  toastModal,
   contactForm,
   menuButtons,
+  checkmarkIcon,
   viewableImages,
   menuCategories,
   hiddenSections,
   imageModalImage,
   imageModalLinks,
-  reservationForm,
+  toastModalTitle,
   reservationModal,
+  toastModalBackdrop,
   imageModalBackdrop,
   contactSubmitButton,
-  reservationOpenButton,
-  reservationCloseButton,
-  reservationSubmitButton,
-  reservationModalBackdrop
+  reservationModalForm,
+  toastModalDescription,
+  reservationModalBackdrop,
+  reservationModalOpenButton,
+  reservationModalCloseButton,
+  reservationModalSubmitButton
 };

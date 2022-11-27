@@ -1,0 +1,31 @@
+#reservation-modal {
+  @apply translate-y-48 duration-500;
+}
+
+#reservation-modal[open] {
+  @apply translate-y-0;
+}
+
+#image-modal {
+  @apply scale-[0.8] duration-300;
+}
+
+#image-modal[open] {
+  @apply scale-100;
+}
+
+#toast-modal {
+  @apply -translate-y-12 duration-500;
+}
+
+#toast-modal[open] {
+  @apply translate-y-0;
+}
+
+.modal-backdrop {
+  @apply pointer-events-none fixed inset-0 z-40 bg-transparent transition duration-500;
+}
+
+.modal-backdrop.active {
+  @apply bg-black/50;
+}
