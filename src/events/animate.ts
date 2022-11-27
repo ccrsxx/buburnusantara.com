@@ -6,26 +6,31 @@ const hiddenSectionsObserver = new IntersectionObserver(
   (entries) =>
     entries.forEach((entry) => {
       const sectionElement = entry.target as HTMLElement;
-      const sectionIndex = +(sectionElement.dataset.index as string);
 
-      const navElement = navLinks[sectionIndex];
+      const isSectionIndexExist = sectionElement.dataset.index;
+      const sectionIndex =
+        isSectionIndexExist !== undefined ? +isSectionIndexExist : null;
+
+      const navElement = sectionIndex !== null ? navLinks[sectionIndex] : null;
 
       const sectionAnimatedElements: NodeListOf<HTMLElement> =
         sectionElement.querySelectorAll('.animated-element');
 
       if (entry.isIntersecting) {
-        currentActiveLink = sectionIndex;
+        if (navElement && sectionIndex !== null) {
+          currentActiveLink = sectionIndex;
 
-        if (sectionIndex >= 1) navbar.classList.add('scrolled-bottom');
-        else navbar.classList.remove('scrolled-bottom');
+          if (sectionIndex >= 1) navbar.classList.add('scrolled-bottom');
+          else navbar.classList.remove('scrolled-bottom');
 
-        navElement.classList.add('active');
+          navElement.classList.add('active');
+        }
 
         sectionAnimatedElements.forEach(
           (element) => !element.style.display && element.classList.add('show')
         );
       } else {
-        navElement.classList.remove('active');
+        if (navElement) navElement.classList.remove('active');
 
         sectionAnimatedElements.forEach((element) =>
           element.classList.remove('show')
