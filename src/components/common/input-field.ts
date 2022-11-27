@@ -21,22 +21,26 @@ export function InputField({
       ''} relative rounded ring-2 ring-slate-200 transition-shadow duration-200 focus-within:ring-blue-400"
     >
       ${useTextArea
-        ? html`<textarea
-            id="${id}"
-            name="${id}"
-            rows="7"
-            class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
-            placeholder=" "
-            required
-          ></textarea>`
-        : html`<input
-            class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
-            id="${id}"
-            name="${id}"
-            type="${type ?? 'text'}"
-            placeholder=" "
-            required
-          />`}
+        ? html`
+            <textarea
+              id="${id}"
+              name="${id}"
+              rows="7"
+              class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
+              placeholder=" "
+              required
+            ></textarea>
+          `
+        : html`
+            <input
+              class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
+              id="${id}"
+              name="${id}"
+              type="${type ?? 'text'}"
+              placeholder=" "
+              required
+            />
+          `}
       <label
         for="${id}"
         class="bg-main-background text-light-secondary dark:text-dark-secondary absolute left-4 translate-y-1

@@ -1,9 +1,9 @@
 import { html } from '@lib/utils';
 import { CustomIcon } from '@components/ui/custom-icon';
 import { InputReserve } from '@components/common/input-reserve';
-import type { InputFieldProps } from '@components/common/input-field';
+import type { InputReserveProps } from '@components/common/input-reserve';
 
-const reservationInputFields: Readonly<InputFieldProps[]> = [
+const reservationInputFields: Readonly<InputReserveProps[]> = [
   {
     id: 'firstName',
     label: 'First Name'
@@ -17,6 +17,11 @@ const reservationInputFields: Readonly<InputFieldProps[]> = [
     type: 'email',
     label: 'Email',
     style: 'col-span-2'
+  },
+  {
+    id: 'people',
+    label: 'How Many People',
+    useSelect: true
   },
   {
     id: 'phone',
@@ -61,23 +66,6 @@ export function ReservationModal(): string {
               (acc, inputData) => acc + InputReserve(inputData),
               ''
             )}
-            <div class="row-start-3 grid gap-1">
-              <label class="self-start" for="people">How Many People</label>
-              <select
-                class="smooth-tab h-full rounded-md bg-white p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
-                name="people"
-                id="people"
-                required
-              >
-                <option value="" selected disabled hidden>
-                  Choose many people
-                </option>
-                <option value="1">1 People</option>
-                <option value="2">2 People</option>
-                <option value="3">3 People</option>
-                <option value="4">4+ People</option>
-              </select>
-            </div>
             <button
               id="reservation-submit-button"
               class="smooth-tab col-span-2 rounded-md bg-yellow-400 p-2 text-white transition duration-200 
