@@ -7,6 +7,7 @@ import { Offer } from './offer';
 import { Menu } from './menu';
 import { Gallery } from './gallery';
 import { Contact } from './contact';
+import { Footer } from './footer';
 import { Modal } from './modal';
 
 function Index(): string {
@@ -21,6 +22,7 @@ function Index(): string {
       ${Gallery()}
       ${Contact()}
     </main>
+    ${Footer()}
     ${Modal()}
   `;
 }

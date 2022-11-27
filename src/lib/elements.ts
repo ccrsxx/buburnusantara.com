@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const hiddenSections = document.querySelectorAll('.hidden-section');
+
 const menuButtons = document.querySelectorAll('.menu-button');
 
 const viewableImages: NodeListOf<HTMLImageElement> =

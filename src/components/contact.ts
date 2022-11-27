@@ -6,7 +6,7 @@ import type { IconName } from './ui/custom-icon';
 type ContactInfo = {
   href: string;
   style: string;
-  content: string;
+  title: string;
   iconName: IconName;
 };
 
@@ -14,32 +14,44 @@ const contactInfos: Readonly<ContactInfo[]> = [
   {
     href: 'https://goo.gl/maps/PxD3wGwbXDKQP5ML9',
     style: 'hover:bg-red-400',
-    content: 'Location',
+    title: 'Location',
     iconName: 'MapPinIcon'
   },
   {
     href: 'tel:+6281234567890',
     style: 'hover:bg-green-400',
-    content: 'Phone',
+    title: 'Phone',
     iconName: 'PhoneIcon'
   },
   {
     href: 'https://wa.me/6281234567890',
     style: 'hover:bg-green-400',
-    content: 'WhatsApp',
+    title: 'WhatsApp',
     iconName: 'WhatsAppIcon'
   },
   {
     href: 'https://www.instagram.com/buburnusantara',
     style: 'hover:bg-rose-400',
-    content: 'Instagram',
+    title: 'Instagram',
     iconName: 'InstagramIcon'
   },
   {
     href: 'mailto:site@buburnusantara.com',
     style: 'hover:bg-blue-400',
-    content: 'Email',
+    title: 'Email',
     iconName: 'AtIcon'
+  },
+  {
+    href: 'https://twitter.com/buburnusantara',
+    style: 'hover:bg-blue-400',
+    title: 'Twitter',
+    iconName: 'TwitterIcon'
+  },
+  {
+    href: 'https://www.facebook.com/buburnusantara',
+    style: 'hover:bg-blue-400',
+    title: 'Facebook',
+    iconName: 'FacebookIcon'
   }
 ];
 
@@ -85,32 +97,30 @@ export function Contact(): string {
           </button>
         </form>
         <div
-          class="animated-element fade-right grid w-full max-w-sm auto-rows-min gap-8 delay-100"
+          class="animated-element fade-right grid w-full max-w-sm auto-rows-min gap-6 delay-100"
         >
-          <div>
-            <iframe
-              class="h-60 w-full rounded-md bg-gray-400"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.989671962544!2d106.71504691475391!3d-6.132089195560011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d4011a5293f%3A0x3af5a7556c06e77!2sBubur%20Ayam%20Kampung%20Nusantara!5e0!3m2!1sen!2sid!4v1669432828948!5m2!1sen!2sid&iwloc=near"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="flex flex-wrap justify-center gap-4 text-black/75">
+          <iframe
+            class="h-60 w-full rounded-md bg-gray-400"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.989671962544!2d106.71504691475391!3d-6.132089195560011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d4011a5293f%3A0x3af5a7556c06e77!2sBubur%20Ayam%20Kampung%20Nusantara!5e0!3m2!1sen!2sid!4v1669432828948!5m2!1sen!2sid&iwloc=near"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="flex flex-wrap justify-center gap-4">
             ${contactInfos.reduce(
-              (acc, { href, style, content, iconName }) =>
+              (acc, { href, style, title, iconName }) =>
                 acc +
                 html`
                   <a
                     href="${href}"
-                    class="${style} flex gap-2 rounded-md bg-[#f8f9fa] p-4 px-4 py-3 shadow transition 
+                    class="${style} flex gap-2 rounded-md bg-[#f8f9fa] p-2 text-black/75 shadow transition
                            duration-300 hover:-translate-y-2 hover:text-white hover:shadow-xl"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <i>${CustomIcon({ iconName })}</i>
-                    ${content}
+                    ${title}
                   </a>
                 `,
               ''

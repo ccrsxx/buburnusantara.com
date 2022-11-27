@@ -15,10 +15,6 @@
     @apply pointer-events-auto opacity-100;
   }
 
-  section {
-    @apply px-16 py-28;
-  }
-
   #navbar {
     @apply absolute flex w-full items-center justify-center py-10 px-16 transition-opacity duration-200;
   }
@@ -63,6 +59,10 @@
 
   #image-modal[open] {
     @apply scale-100;
+  }
+
+  .hidden-section {
+    @apply px-16 py-28;
   }
 
   .modal-backdrop {
