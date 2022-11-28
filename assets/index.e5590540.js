@@ -14,7 +14,7 @@
   `}function Je(){return C`
     <section
       id="home"
-      class="hidden-section grid min-h-screen content-center gap-12 bg-gray-800 bg-[url(/assets/home-background.webp)] bg-cover
+      class="hidden-section grid min-h-screen content-center gap-12 bg-main-background bg-[url(/assets/home-background.webp)] bg-cover
              bg-fixed bg-center py-0 pt-10 text-center before:pointer-events-none before:absolute before:inset-0 before:bg-black/20"
       data-index="0"
     >
@@ -428,7 +428,7 @@
       <div class="main-container flex items-start justify-center gap-24">
         <section class="animated-element fade-bottom grid max-w-xs gap-3">
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
-          <p class="text-white/30">
+          <p class="leading-normal text-white/30">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             aliquid unde rem odio dolor quae illum reiciendis quia similique
             voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
@@ -437,7 +437,7 @@
         </section>
         <section class="animated-element fade-bottom fade-delay-100 grid gap-3">
           <h2 class="font-poppins font-medium text-white/60">Open hours</h2>
-          <ul>
+          <ul class="grid gap-1">
             ${kt.reduce((e,{day:t,open:i})=>e+C`
                   <li class="grid grid-cols-2 gap-3 text-white/30">
                     <span>${t}</span>
@@ -452,7 +452,7 @@
                        animated-element fade-bottom grid gap-3"
               >
                 <h2 class="font-poppins font-medium text-white/60">${t}</h2>
-                <nav class="grid gap-2">
+                <nav class="grid gap-1">
                   ${i.reduce((n,{name:a,href:o})=>n+C`
                         <a
                           class="hover:transition-200 text-white/30 transition hover:text-accent-orange"
