@@ -52,7 +52,7 @@ const openHours: Readonly<OpenHour[]> = [
 export function Footer(): string {
   return html`
     <footer class="hidden-section grid justify-items-center gap-24 bg-[#333]">
-      <div class="flex w-full max-w-6xl items-start justify-center gap-24">
+      <div class="main-container flex items-start justify-center gap-24">
         <section class="animated-element fade-bottom grid max-w-xs gap-3">
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
           <p class="text-white/30">
@@ -62,7 +62,7 @@ export function Footer(): string {
             nostrum nemo.
           </p>
         </section>
-        <section class="animated-element fade-bottom grid gap-3 delay-100">
+        <section class="animated-element fade-bottom fade-delay-100 grid gap-3">
           <h2 class="font-poppins font-medium text-white/60">Open hours</h2>
           <ul>
             ${openHours.reduce(
@@ -78,13 +78,14 @@ export function Footer(): string {
             )}
           </ul>
         </section>
-        ${footerLinks.reduce((acc, { title, links }, index) => {
-          const delay = `delay-${(index + 2) * 100}`;
-
-          return (
+        ${footerLinks.reduce(
+          (acc, { title, links }, index) =>
             acc +
             html`
-              <section class="${delay} animated-element fade-bottom grid gap-3">
+              <section
+                class="fade-delay-${(index + 2) * 100} 
+                       animated-element fade-bottom grid gap-3"
+              >
                 <h2 class="font-poppins font-medium text-white/60">${title}</h2>
                 <nav class="grid gap-2">
                   ${links.reduce(
@@ -102,12 +103,12 @@ export function Footer(): string {
                   )}
                 </nav>
               </section>
-            `
-          );
-        }, '')}
+            `,
+          ''
+        )}
       </div>
       <p
-        class="animated-element fade-bottom text-center font-poppins delay-[400ms]"
+        class="animated-element fade-bottom fade-delay-400 text-center font-poppins"
       >
         Copyright &copy; 2022 Bubur Nusantara. All rights reserved.
       </p>

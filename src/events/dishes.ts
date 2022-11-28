@@ -45,10 +45,10 @@ function toggleMenuCategory(menuId: Menu): void {
       setTimeout(() => {
         menuCategory.style.display = '';
         setTimeout(() => menuCategory.classList.add('show'), 100);
-      }, 700);
+      }, 500);
     } else if (prevMenu === menuCategoryId) {
       menuCategory.classList.remove('show');
-      setTimeout(() => (menuCategory.style.display = 'none'), 700);
+      setTimeout(() => (menuCategory.style.display = 'none'), 500);
     } else {
       menuCategory.classList.remove('show');
       menuCategory.style.display = 'none';

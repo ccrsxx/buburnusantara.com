@@ -62,10 +62,10 @@ export function Contact(): string {
           nostrum nemo.
         </p>
       </div>
-      <div class="flex w-full max-w-6xl justify-between">
+      <div class="main-container flex justify-between">
         <form
           id="contact-form"
-          class="animated-element fade-left grid w-full max-w-2xl items-center gap-4 delay-100"
+          class="animated-element fade-left fade-delay-100 grid w-full max-w-2xl items-center gap-4"
         >
           ${InputField({ id: 'name', label: 'Name' })}
           ${InputField({ id: 'email', label: 'Email', type: 'email' })}
@@ -85,7 +85,7 @@ export function Contact(): string {
           </button>
         </form>
         <div
-          class="animated-element fade-right grid w-full max-w-sm auto-rows-min gap-6 delay-100"
+          class="animated-element fade-right fade-delay-100 grid w-full max-w-sm auto-rows-min gap-6"
         >
           <iframe
             class="h-60 w-full rounded-md bg-gray-400"

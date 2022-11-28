@@ -14,11 +14,11 @@ export function Home(): string {
         Welcome to Bubur
       </h1>
       <h2
-        class="animated-element fade-bottom text-xl font-light text-white/90 delay-100"
+        class="animated-element fade-bottom fade-delay-100 text-xl font-light text-white/90"
       >
         Come and eat well with our delicious & healthy foods.
       </h2>
-      <div class="animated-element fade-bottom delay-200">
+      <div class="animated-element fade-bottom fade-delay-200">
         <button
           id="reservation-modal-open-button"
           class="rounded border-2 border-white/80 px-8 py-4 font-poppins font-bold uppercase text-white

@@ -19,7 +19,7 @@ const navLinks: Readonly<NavLink[]> = [
 export function Navbar(): string {
   return html`
     <header id="navbar">
-      <div class="flex w-full max-w-6xl items-center justify-between">
+      <div class="main-container flex items-center justify-between">
         <a
           class="smooth-tab text-xl uppercase tracking-widest text-white"
           href="#"

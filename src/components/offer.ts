@@ -54,7 +54,7 @@ export function Offer(): string {
         </p>
       </div>
       <div
-        class="swiper animated-element fade-bottom h-full max-w-6xl !pb-12 delay-100"
+        class="swiper animated-element fade-bottom main-container fade-delay-100 !pb-12"
       >
         <div class="swiper-wrapper cursor-grab select-none">
           ${placeholderOffers.reduce(

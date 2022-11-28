@@ -1,3 +1,4 @@
+@use './scss/menu.scss';
 @use './scss/modal.scss';
 @use './scss/navbar.scss';
 @use './scss/swiper.scss';
@@ -24,17 +25,8 @@
     @apply px-16 py-28;
   }
 
-  .menu-button {
-    @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] 
-           transition duration-200 hover:brightness-75 hover:delay-[0ms];
-  }
-
-  .menu-button.active {
-    @apply border-black text-black;
-  }
-
-  .menu-category {
-    @apply grid max-w-6xl translate-y-8 grid-cols-2 gap-8 delay-[400ms];
+  .main-container {
+    @apply w-full max-w-6xl;
   }
 
   .viewable-image {

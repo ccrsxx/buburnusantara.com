@@ -1,9 +1,16 @@
 .animated-element {
-  @apply opacity-0 transition duration-500;
+  // prettier-ignore
+  @apply opacity-0 transition duration-500
 }
 
 .animated-element.show {
   @apply opacity-100;
+}
+
+@for $i from 1 through 4 {
+  .fade-delay-#{$i}00.show {
+    transition-delay: $i * 100ms;
+  }
 }
 
 .fade-bottom {

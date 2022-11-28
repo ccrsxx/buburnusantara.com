@@ -16,7 +16,7 @@ export function ProductsCategory({
     <div
       id=${category}
       style="display: none;"
-      class="menu-category animated-element fade-bottom"
+      class="menu-category animated-element fade-bottom fade-delay-400"
     >
       ${products.reduce(
         (acc, { name, price, image, description }) =>

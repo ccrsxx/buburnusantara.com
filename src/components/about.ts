@@ -7,9 +7,9 @@ export function About(): string {
       class="hidden-section flex items-center justify-center"
       data-index="1"
     >
-      <div class="flex w-full max-w-6xl items-center justify-between">
+      <div class="main-container flex items-center justify-between">
         <div
-          class="animated-element fade-bottom grid max-w-md gap-4
+          class="animated-element fade-left grid max-w-md gap-4
                  [&>p]:text-lg [&>p]:text-[#b8b8b8]"
         >
           <h4 class="tracking-widest text-[#d4d4d4]">OUR STORY</h4>
