@@ -5,7 +5,7 @@ import {
   toastModalBackdrop,
   toastModalDescription
 } from '@lib/elements';
-import { sleep, isInDialog } from '@lib/utils';
+import { sleep, isInDialog } from './utils';
 
 toastModal.addEventListener('click', handleToastModalClose);
 toastModal.addEventListener('submit', handleToastModalClose);

@@ -82,10 +82,10 @@ export function Menu(): string {
               <div
                 class="animated-element fade-bottom
                   ${!indexOfThree
-                  ? 'delay-100'
+                  ? 'fade-delay-100'
                   : indexOfThree === 1
-                  ? 'delay-200'
-                  : 'delay-300'}"
+                  ? 'fade-delay-200'
+                  : 'fade-delay-300'}"
               >
                 <button class="menu-button" id="${menu}">${menu}</button>
               </div>
@@ -93,7 +93,7 @@ export function Menu(): string {
           );
         }, '')}
       </div>
-      <div>
+      <div class="main-container">
         ${allMenus.reduce(
           (acc, { category, products }) =>
             acc + ProductsCategory({ category, products }),
