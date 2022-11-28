@@ -19,11 +19,11 @@
 
   nav {
     .nav-link {
-      @apply hover:text-[#FDA403]/75;
+      @apply hover:text-accent-orange/75;
     }
 
     .nav-link.active {
-      @apply text-[#FDA403];
+      @apply text-accent-orange;
     }
   }
 }

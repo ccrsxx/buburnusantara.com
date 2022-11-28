@@ -55,7 +55,7 @@ export function Footer(): string {
       <div class="main-container flex items-start justify-center gap-24">
         <section class="animated-element fade-bottom grid max-w-xs gap-3">
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
-          <p class="text-white/30">
+          <p class="leading-normal text-white/30">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             aliquid unde rem odio dolor quae illum reiciendis quia similique
             voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
@@ -64,7 +64,7 @@ export function Footer(): string {
         </section>
         <section class="animated-element fade-bottom fade-delay-100 grid gap-3">
           <h2 class="font-poppins font-medium text-white/60">Open hours</h2>
-          <ul>
+          <ul class="grid gap-1">
             ${openHours.reduce(
               (acc, { day, open }) =>
                 acc +
@@ -87,13 +87,13 @@ export function Footer(): string {
                        animated-element fade-bottom grid gap-3"
               >
                 <h2 class="font-poppins font-medium text-white/60">${title}</h2>
-                <nav class="grid gap-2">
+                <nav class="grid gap-1">
                   ${links.reduce(
                     (acc, { name, href }) =>
                       acc +
                       html`
                         <a
-                          class="hover:transition-200 text-white/30 transition hover:text-[#FDA403]"
+                          class="hover:transition-200 text-white/30 transition hover:text-accent-orange"
                           href="${href}"
                         >
                           ${name}

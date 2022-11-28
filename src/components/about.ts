@@ -9,10 +9,9 @@ export function About(): string {
     >
       <div class="main-container flex items-center justify-between">
         <div
-          class="animated-element fade-left grid max-w-md gap-4
-                 [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+          class="animated-element fade-left grid max-w-md gap-4 [&>p]:text-lg"
         >
-          <h4 class="tracking-widest text-[#d4d4d4]">OUR STORY</h4>
+          <h4 class="tracking-widest text-main-secondary">OUR STORY</h4>
           <h2 class="mb-4 font-poppins text-6xl font-bold text-black">
             Welcome
           </h2>

@@ -43,9 +43,9 @@ export function InputField({
           `}
       <label
         for="${id}"
-        class="bg-main-background text-light-secondary dark:text-dark-secondary absolute left-4 translate-y-1
-               text-sm transition-all peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-lg
-               peer-placeholder-shown:text-inherit peer-focus:translate-y-1 peer-focus:text-sm peer-focus:text-blue-400"
+        class="text-light-secondary dark:text-dark-secondary absolute left-4 translate-y-1 text-sm transition-all 
+               peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-lg peer-placeholder-shown:text-inherit 
+               peer-focus:translate-y-1 peer-focus:text-sm peer-focus:text-blue-400"
       >
         ${label}
       </label>

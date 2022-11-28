@@ -26,13 +26,10 @@ export function Gallery(): string {
   return html`
     <section
       id="gallery"
-      class="hidden-section grid justify-center gap-12 bg-[#f8f9fa]"
+      class="hidden-section grid justify-center gap-12"
       data-index="4"
     >
-      <div
-        class="animated-element fade-bottom grid gap-4 text-center 
-               [&>p]:text-lg [&>p]:text-[#b8b8b8]"
-      >
+      <div class="animated-element fade-bottom grid gap-4 text-center">
         <h2 class="font-poppins text-6xl font-bold text-black">Gallery</h2>
         <p class="max-w-2xl justify-self-center text-xl font-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio

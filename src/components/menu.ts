@@ -59,8 +59,7 @@ export function Menu(): string {
       data-index="3"
     >
       <div
-        class="animated-element fade-bottom grid content-center gap-4 text-center 
-               [&>p]:text-lg [&>p]:text-[#b8b8b8]"
+        class="animated-element fade-bottom grid content-center gap-4 text-center"
       >
         <h2 class="font-poppins text-6xl font-bold text-black">
           Delicious Menu

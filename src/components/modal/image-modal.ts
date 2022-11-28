@@ -14,9 +14,9 @@ export function ImageModal(): string {
               alt=""
             />
             <a
-              class="accent-tab focus-visible:bg-main-accent image-modal-link hover:bg-[#FDA403 absolute bottom-0 right-0 mx-2 mb-2
+              class="accent-tab focus-visible:bg-main-accent image-modal-link absolute bottom-0 right-0 mx-2 mb-2
                      translate-y-4 cursor-pointer rounded-md bg-black/20 px-2 py-1 font-poppins text-sm text-white/80 opacity-0
-                     transition hover:bg-[#FDA403] hover:text-white focus-visible:translate-y-0 focus-visible:text-white 
+                     transition hover:bg-accent-orange hover:text-white focus-visible:translate-y-0 focus-visible:text-white 
                      focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
               target="_blank"
               rel="noreferrer"

@@ -33,7 +33,7 @@ export function ProductsCategory({
                   ${name}
                 </h6>
                 <p>${description}</p>
-                <h5 class="font-poppins text-2xl text-[#FDA403]">
+                <h5 class="font-poppins text-2xl text-accent-orange">
                   ${formatCurrency(price)}
                 </h5>
               </div>

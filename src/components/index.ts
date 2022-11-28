@@ -14,16 +14,15 @@ function Index(): string {
   // prettier-ignore
   return html`
     ${Navbar()}
-    <main>
-      ${Home()}
-      ${About()}
-      ${Offer()}
-      ${Menu()}
-      ${Gallery()}
+    <main class="[&>*:not(:first-child):nth-child(odd)]:bg-main-background">
+      ${Home()} 
+      ${About()} 
+      ${Offer()} 
+      ${Menu()} 
+      ${Gallery()} 
       ${Contact()}
     </main>
-    ${Footer()}
-    ${Modal()}
+    ${Footer()} ${Modal()}
   `;
 }
 

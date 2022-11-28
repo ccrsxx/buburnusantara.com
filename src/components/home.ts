@@ -4,7 +4,7 @@ export function Home(): string {
   return html`
     <section
       id="home"
-      class="hidden-section grid min-h-screen content-center gap-12 bg-gray-800 bg-[url(/assets/home-background.webp)] bg-cover
+      class="hidden-section grid min-h-screen content-center gap-12 bg-main-background bg-[url(/assets/home-background.webp)] bg-cover
              bg-fixed bg-center py-0 pt-10 text-center before:pointer-events-none before:absolute before:inset-0 before:bg-black/20"
       data-index="0"
     >

@@ -1,4 +1,4 @@
-import { navbar, navLinks, mainTitle, hiddenSections } from '../lib/elements';
+import { navbar, navLinks, mainTitle, hiddenSections } from '@lib/elements';
 
 let currentActiveLink: number;
 

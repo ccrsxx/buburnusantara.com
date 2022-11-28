@@ -33,16 +33,9 @@ const placeholderOffers = [...(Array(3) as undefined[])].reduce(
 
 export function Offer(): string {
   return html`
-    <section
-      id="offer"
-      class="hidden-section grid gap-12 bg-[#f8f9fa]"
-      data-index="2"
-    >
-      <div
-        class="animated-element fade-bottom grid gap-4 text-center 
-              [&>p]:text-lg [&>p]:text-[#b8b8b8]"
-      >
-        <h4 class="tracking-widest text-[#d4d4d4]">OUR OFFERS</h4>
+    <section id="offer" class="hidden-section grid gap-12" data-index="2">
+      <div class="animated-element fade-bottom grid gap-4 text-center">
+        <h4 class="tracking-widest text-main-secondary">OUR OFFERS</h4>
         <h2 class="font-poppins text-6xl font-bold text-black">
           Our Offer This Summer
         </h2>
