@@ -52,7 +52,9 @@ const openHours: Readonly<OpenHour[]> = [
 export function Footer(): string {
   return html`
     <footer class="hidden-section grid justify-items-center gap-24 bg-[#333]">
-      <div class="main-container flex items-start justify-center gap-24">
+      <div
+        class="main-container flex flex-wrap items-start justify-center gap-24"
+      >
         <section class="animated-element fade-bottom grid max-w-xs gap-3">
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
           <p class="leading-normal text-white/30">
@@ -93,7 +95,7 @@ export function Footer(): string {
                       acc +
                       html`
                         <a
-                          class="hover:transition-200 text-white/30 transition hover:text-accent-orange"
+                          class="text-white/30 transition duration-200 hover:text-accent-orange hover:transition"
                           href="${href}"
                         >
                           ${name}

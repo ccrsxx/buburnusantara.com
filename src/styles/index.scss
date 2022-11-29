@@ -1,9 +1,10 @@
-@use './scss/menu.scss';
-@use './scss/modal.scss';
-@use './scss/navbar.scss';
-@use './scss/swiper.scss';
-@use './scss/checkmark.scss';
-@use './scss/transition.scss';
+@use 'scss/menu';
+@use 'scss/modal';
+@use 'scss/navbar';
+@use 'scss/swiper';
+@use 'scss/hamburger';
+@use 'scss/checkmark';
+@use 'scss/transition';
 
 @tailwind base;
 @tailwind components;
@@ -26,7 +27,7 @@
 
 @layer components {
   .hidden-section {
-    @apply px-16 py-28;
+    @apply px-8 py-14 lg:px-16 lg:py-28;
   }
 
   .main-container {

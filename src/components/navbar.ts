@@ -19,17 +19,30 @@ const navLinks: Readonly<NavLink[]> = [
 export function Navbar(): string {
   return html`
     <header id="navbar">
-      <div class="main-container flex items-center justify-between">
-        <a
-          class="smooth-tab text-xl uppercase tracking-widest text-white"
-          href="#"
-          >Bubur</a
-        >
-        <nav id="nav-link-container" class="flex gap-8">
+      <div
+        class="main-container flex flex-col justify-center lg:flex-row lg:justify-between lg:gap-4"
+      >
+        <div class="flex justify-between">
+          <a
+            class="smooth-tab self-start text-xl uppercase tracking-widest text-black lg:self-auto lg:text-white"
+            href="#"
+            >Bubur
+          </a>
+          <button id="hamburger-button">
+            <i class="container">
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </i>
+          </button>
+        </div>
+        <nav id="nav-links-container">
           ${navLinks.reduce(
             (acc, { name, href }) =>
               acc +
-              html`<a class="smooth-tab nav-link" href="${href}">${name}</a>`,
+              html`
+                <a class="nav-link smooth-tab" href="${href}"> ${name} </a>
+              `,
             ''
           )}
         </nav>

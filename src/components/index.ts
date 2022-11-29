@@ -22,7 +22,8 @@ function Index(): string {
       ${Gallery()} 
       ${Contact()}
     </main>
-    ${Footer()} ${Modal()}
+    ${Footer()} 
+    ${Modal()}
   `;
 }
 

@@ -7,8 +7,8 @@
   stroke: #fff;
   stroke-miterlimit: 10;
   box-shadow: inset 0px 0px 0px #7ac142;
-  animation: fill 0.4s ease-in-out 0.4s forwards,
-    scale 0.3s ease-in-out 0.9s both;
+  // prettier-ignore
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
 }
 
 .checkmark-circle {
@@ -28,24 +28,24 @@
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
+@keyframes fill {
+  to {
+    box-shadow: inset 0px 0px 0px 80px #7ac142;
+  }
+}
+
 @keyframes stroke {
-  100% {
+  to {
     stroke-dashoffset: 0;
   }
 }
 
 @keyframes scale {
-  0%,
-  100% {
+  from,
+  to {
     transform: none;
   }
   50% {
     transform: scale3d(1.1, 1.1, 1);
-  }
-}
-
-@keyframes fill {
-  100% {
-    box-shadow: inset 0px 0px 0px 80px #7ac142;
   }
 }

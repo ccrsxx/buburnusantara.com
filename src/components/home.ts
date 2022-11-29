@@ -4,12 +4,14 @@ export function Home(): string {
   return html`
     <section
       id="home"
-      class="hidden-section grid min-h-screen content-center gap-12 bg-main-background bg-[url(/assets/home-background.webp)] bg-cover
-             bg-fixed bg-center py-0 pt-10 text-center before:pointer-events-none before:absolute before:inset-0 before:bg-black/20"
+      class="hidden-section grid min-h-screen content-center gap-12 bg-main-background 
+             bg-[url(/assets/home-background.webp)] bg-cover bg-fixed bg-center py-0 pt-10 text-center 
+             before:pointer-events-none before:absolute before:inset-0 before:bg-black/20"
       data-index="0"
     >
+      <div id="home-intersect-point" class="absolute top-24 h-10 w-10"></div>
       <h1
-        class="animated-element fade-bottom font-poppins text-7xl font-bold text-white"
+        class="animated-element fade-bottom font-poppins text-4xl font-bold text-white lg:text-7xl"
       >
         Welcome to Bubur
       </h1>

@@ -1,3 +1,4 @@
+import './navigation';
 import './animate';
 import './reserve';
 import './swiper';

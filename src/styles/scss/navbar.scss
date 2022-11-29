@@ -1,5 +1,6 @@
 #navbar {
-  @apply absolute z-10 flex w-full items-center justify-center py-10 px-16 transition-opacity duration-200;
+  @apply absolute z-10 flex w-full items-center justify-center bg-white/60 px-8 py-6
+         backdrop-blur-md transition-opacity duration-200 lg:bg-inherit lg:backdrop-blur-none;
 }
 
 #navbar.sleep {
@@ -7,7 +8,7 @@
 }
 
 #navbar.scrolled-middle {
-  @apply fixed  -mt-32 bg-white/60 py-4 px-8 opacity-0 shadow backdrop-blur-md hover:shadow-lg;
+  @apply fixed -mt-32 py-4 px-8 opacity-0 shadow hover:shadow-lg lg:bg-white/60 lg:backdrop-blur-md;
 }
 
 #navbar.scrolled-bottom {
@@ -28,10 +29,21 @@
   }
 }
 
+#nav-links-container {
+  @apply flex h-0 flex-col items-center gap-2 opacity-0 transition-all duration-200
+         lg:h-auto lg:flex-row lg:items-start lg:gap-8 lg:bg-inherit lg:opacity-100 lg:transition-none;
+}
+
+#nav-links-container.active {
+  @apply h-60 opacity-100 lg:h-auto;
+}
+
 .nav-link {
-  @apply uppercase tracking-[0.2em] text-white/75 transition hover:text-white/90 hover:duration-200;
+  @apply w-36 border-b border-black/40 pb-2 uppercase tracking-[0.2em] text-black/75 transition
+         hover:text-accent-orange/75 hover:duration-200 lg:w-auto lg:border-none 
+         lg:text-white/75 lg:hover:text-white/90;
 }
 
 .nav-link.active {
-  @apply text-white;
+  @apply text-black lg:text-white;
 }

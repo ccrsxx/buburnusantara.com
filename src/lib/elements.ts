@@ -13,7 +13,18 @@ const menuCategories: NodeListOf<HTMLDivElement> =
   document.querySelectorAll('.menu-category');
 
 const navbar = document.getElementById('navbar') as HTMLElement;
-const mainTitle = document.getElementById('home') as HTMLElement;
+
+const navLinksContainer = document.getElementById(
+  'nav-links-container'
+) as HTMLElement;
+
+const hamburgerButton = document.getElementById(
+  'hamburger-button'
+) as HTMLButtonElement;
+
+const homeIntersectPoint = document.getElementById(
+  'home-intersect-point'
+) as HTMLDivElement;
 
 const reservationModal = document.getElementById(
   'reservation-modal'
@@ -74,7 +85,6 @@ const contactSubmitButton = document.getElementById(
 export {
   navbar,
   navLinks,
-  mainTitle,
   imageModal,
   toastModal,
   contactForm,
@@ -85,8 +95,11 @@ export {
   hiddenSections,
   imageModalImage,
   imageModalLinks,
+  hamburgerButton,
   toastModalTitle,
   reservationModal,
+  navLinksContainer,
+  homeIntersectPoint,
   toastModalBackdrop,
   imageModalBackdrop,
   contactSubmitButton,

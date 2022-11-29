@@ -1,6 +1,9 @@
-import { navbar, navLinks, mainTitle, hiddenSections } from '@lib/elements';
-
-let currentActiveLink: number;
+import {
+  navbar,
+  navLinks,
+  hiddenSections,
+  homeIntersectPoint
+} from '@lib/elements';
 
 const hiddenSectionsObserver = new IntersectionObserver(
   (entries) =>
@@ -17,14 +20,8 @@ const hiddenSectionsObserver = new IntersectionObserver(
         sectionElement.querySelectorAll('.animated-element');
 
       if (entry.isIntersecting) {
-        if (navElement && sectionIndex !== null) {
-          currentActiveLink = sectionIndex;
-
-          if (sectionIndex >= 1) navbar.classList.add('scrolled-bottom');
-          else navbar.classList.remove('scrolled-bottom');
-
+        if (navElement && sectionIndex !== null)
           navElement.classList.add('active');
-        }
 
         sectionAnimatedElements.forEach(
           (element) => !element.style.display && element.classList.add('show')
@@ -40,15 +37,21 @@ const hiddenSectionsObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-const mainTitleObserver = new IntersectionObserver(
+const homeIntersectPointObserver = new IntersectionObserver(
   (entries) =>
     entries.forEach(({ isIntersecting }) => {
-      if (!isIntersecting) {
+      if (isIntersecting) {
+        navbar.classList.remove('scrolled-bottom');
+        setTimeout(() => {
+          navbar.classList.remove('sleep');
+          navbar.classList.remove('scrolled-middle');
+        }, 200);
+      } else {
         navbar.classList.add('scrolled-middle');
-        setTimeout(() => navbar.classList.add('sleep'), 500);
-      } else if (currentActiveLink === 0) {
-        navbar.classList.remove('sleep');
-        navbar.classList.remove('scrolled-middle');
+        setTimeout(() => {
+          navbar.classList.add('sleep');
+          setTimeout(() => navbar.classList.add('scrolled-bottom'), 100);
+        }, 50);
       }
     }),
   { threshold: 1 }
@@ -58,4 +61,4 @@ hiddenSections.forEach((hiddenSection) =>
   hiddenSectionsObserver.observe(hiddenSection)
 );
 
-mainTitleObserver.observe(mainTitle);
+homeIntersectPointObserver.observe(homeIntersectPoint);
