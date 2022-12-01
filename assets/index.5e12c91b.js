@@ -604,7 +604,7 @@
   `}const zt=[{id:"firstName",label:"First Name"},{id:"lastName",label:"Last Name"},{id:"email",type:"email",label:"Email",style:"sm:col-span-2"},{id:"people",label:"How Many People",useSelect:!0},{id:"phone",type:"tel",label:"Phone"},{id:"date",type:"date",label:"Date"},{id:"time",type:"time",label:"Time"},{id:"message",label:"Message",style:"sm:col-span-2",useTextArea:!0}];function Dt(){return C`
     <div>
       <div id="reservation-modal-backdrop" class="modal-backdrop"></div>
-      <dialog id="reservation-modal" class="pb-8 sm:pb-0">
+      <dialog id="reservation-modal" class="pb-4 sm:pb-0">
         <div class="w-[90vw] max-w-3xl flex-col gap-4 rounded-md bg-white p-4">
           <button
             id="reservation-modal-close-button"
