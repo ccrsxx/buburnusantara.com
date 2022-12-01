@@ -4,17 +4,17 @@ export function About(): string {
   return html`
     <section
       id="about"
-      class="hidden-section flex items-center justify-center"
+      class="hidden-section grid place-items-center"
       data-index="1"
     >
-      <div class="main-container flex items-center justify-between">
+      <div
+        class="main-container flex flex-col items-center justify-between 
+               gap-8 lg:flex-row lg:gap-4"
+      >
         <div
-          class="animated-element fade-left grid max-w-md gap-4 [&>p]:text-lg"
+          class="animated-element fade-left grid max-w-2xl gap-4 lg:max-w-md [&>p]:text-lg"
         >
-          <h4 class="tracking-widest text-main-secondary">OUR STORY</h4>
-          <h2 class="mb-4 font-poppins text-6xl font-bold text-black">
-            Welcome
-          </h2>
+          <h2 class="section-title mb-4 text-center lg:text-left">Welcome</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             aliquid unde rem odio dolor quae illum reiciendis quia similique
@@ -29,7 +29,8 @@ export function About(): string {
           </p>
         </div>
         <img
-          class="animated-element fade-right viewable-image h-96 w-[576px] rounded-md duration-500"
+          class="animated-element fade-right viewable-image h-72 w-[448px]
+                 rounded-md object-cover duration-500 xl:h-96 xl:w-[576px]"
           src="/assets/about-chef.webp"
           alt="Chef"
         />

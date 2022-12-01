@@ -6,8 +6,12 @@ const cachedCurrentMenu = localStorage.getItem('currentMenu') as Menu;
 let currentMenu: Menu = cachedCurrentMenu ?? 'breakfast';
 let prevMenu: Menu;
 
+let isFirstRender = true;
+
 highlightMenuButton(currentMenu);
 toggleMenuCategory(currentMenu);
+
+setTimeout(() => (isFirstRender = false), 500);
 
 menuButtons.forEach((menuButton) => {
   const menuId = menuButton.id as Menu;
@@ -44,7 +48,8 @@ function toggleMenuCategory(menuId: Menu): void {
       if (!prevMenu) menuCategory.style.display = '';
       setTimeout(() => {
         menuCategory.style.display = '';
-        setTimeout(() => menuCategory.classList.add('show'), 100);
+        if (!isFirstRender)
+          setTimeout(() => menuCategory.classList.add('show'), 100);
       }, 500);
     } else if (prevMenu === menuCategoryId) {
       menuCategory.classList.remove('show');

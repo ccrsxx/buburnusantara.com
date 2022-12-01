@@ -15,14 +15,14 @@ function Index(): string {
   return html`
     ${Navbar()}
     <main class="[&>*:not(:first-child):nth-child(odd)]:bg-main-background">
-      ${Home()} 
-      ${About()} 
-      ${Offer()} 
-      ${Menu()} 
-      ${Gallery()} 
+      ${Home()}
+      ${About()}
+      ${Offer()}
+      ${Menu()}
+      ${Gallery()}
       ${Contact()}
     </main>
-    ${Footer()} 
+    ${Footer()}
     ${Modal()}
   `;
 }

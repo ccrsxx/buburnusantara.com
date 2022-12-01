@@ -11,13 +11,20 @@
 @tailwind utilities;
 
 @layer base {
+  a,
+  input,
+  button,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     @apply font-raleway text-main-primary;
   }
 
   dialog {
-    @apply pointer-events-none fixed inset-0 z-50 mx-auto grid place-items-center 
-           bg-transparent p-0 opacity-0 transition;
+    @apply pointer-events-none fixed inset-0 z-50 my-4 grid min-h-screen max-w-[calc((100%-6px)-2em)]
+           place-items-center bg-transparent p-0 opacity-0 transition sm:my-auto sm:min-h-0;
   }
 
   dialog[open] {
@@ -27,7 +34,15 @@
 
 @layer components {
   .hidden-section {
-    @apply px-8 py-14 lg:px-16 lg:py-28;
+    @apply scroll-mt-8 px-8 py-14 lg:scroll-mt-0 lg:px-16 lg:py-28;
+  }
+
+  .section-title {
+    @apply font-poppins text-3xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  .section-subtitle {
+    @apply max-w-2xl justify-self-center text-lg font-light sm:text-xl;
   }
 
   .main-container {

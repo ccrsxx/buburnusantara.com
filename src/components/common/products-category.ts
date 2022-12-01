@@ -24,16 +24,18 @@ export function ProductsCategory({
           html`
             <div class="grid grid-cols-[auto,1fr] gap-4">
               <img
-                class="viewable-image h-28 w-28 rounded-full"
+                class="viewable-image h-20 w-20 rounded-full sm:h-28 sm:w-28"
                 src="${image}"
                 alt="${name}"
               />
               <div class="grid gap-2">
-                <h6 class="font-poppins text-xl font-bold text-black">
+                <h6
+                  class="font-poppins text-lg font-bold text-black sm:text-xl"
+                >
                   ${name}
                 </h6>
                 <p>${description}</p>
-                <h5 class="font-poppins text-2xl text-accent-orange">
+                <h5 class="font-poppins text-xl text-accent-orange sm:text-2xl">
                   ${formatCurrency(price)}
                 </h5>
               </div>

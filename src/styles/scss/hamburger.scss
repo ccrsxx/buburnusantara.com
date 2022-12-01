@@ -40,7 +40,7 @@
     }
   }
 
-  &.active > i > span {
+  &.active:hover > i > span {
     background-color: #3c3c3cb3;
     transition: top 250ms, background-color 250ms, transform 250ms;
   }

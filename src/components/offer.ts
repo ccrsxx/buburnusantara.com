@@ -35,11 +35,8 @@ export function Offer(): string {
   return html`
     <section id="offer" class="hidden-section grid gap-12" data-index="2">
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h4 class="tracking-widest text-main-secondary">OUR OFFERS</h4>
-        <h2 class="font-poppins text-6xl font-bold text-black">
-          Our Offer This Summer
-        </h2>
-        <p class="max-w-2xl justify-self-center text-xl font-light">
+        <h2 class="section-title">Our Offer This Summer</h2>
+        <p class="section-subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           aliquid unde rem odio dolor quae illum reiciendis quia similique
           voluptates in, eos optio voluptatem. Dolorum quis eaque delectus

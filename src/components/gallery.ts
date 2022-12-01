@@ -26,12 +26,12 @@ export function Gallery(): string {
   return html`
     <section
       id="gallery"
-      class="hidden-section grid justify-center gap-12"
+      class="hidden-section grid auto-cols-fr justify-items-center gap-12"
       data-index="4"
     >
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h2 class="font-poppins text-6xl font-bold text-black">Gallery</h2>
-        <p class="max-w-2xl justify-self-center text-xl font-light">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           aliquid unde rem odio dolor quae illum reiciendis quia similique
           voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
@@ -39,14 +39,15 @@ export function Gallery(): string {
         </p>
       </div>
       <div
-        class="animated-element fade-bottom main-container fade-delay-100 grid grid-cols-3 gap-4"
+        class="animated-element fade-bottom main-container fade-delay-100
+               grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 sm:gap-4"
       >
         ${placeholderProductImages.reduce(
           (acc, { name, image }) =>
             acc +
             html`
               <img
-                class="viewable-image cursor-pointer rounded-md"
+                class="viewable-image h-full w-full cursor-pointer rounded-md"
                 src="${image}"
                 alt="${name}"
               />

@@ -1,9 +1,9 @@
 .animated-element {
-  @apply opacity-0 transition duration-500;
-}
+  @apply pointer-events-none opacity-0 transition duration-500;
 
-.animated-element.show {
-  @apply opacity-100;
+  &.show {
+    @apply pointer-events-auto opacity-100;
+  }
 }
 
 @for $i from 1 through 4 {
@@ -14,24 +14,24 @@
 
 .fade-bottom {
   @apply translate-y-8;
-}
 
-.fade-bottom.show {
-  @apply translate-y-0;
+  &.show {
+    @apply translate-y-0;
+  }
 }
 
 .fade-left {
   @apply -translate-x-8;
-}
 
-.fade-left.show {
-  @apply translate-x-0;
+  &.show {
+    @apply translate-x-0;
+  }
 }
 
 .fade-right {
   @apply translate-x-8;
-}
 
-.fade-right.show {
-  @apply translate-x-0;
+  &.show {
+    @apply translate-x-0;
+  }
 }

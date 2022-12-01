@@ -1,13 +1,13 @@
 import { html } from '@lib/utils';
 
-const linksPlaceholder = [
+type Link = { name: string; href: string };
+
+const linksPlaceholder: Readonly<Link[]> = [
   { name: 'About Us', href: '#' },
   { name: 'Our Chef', href: '#' },
   { name: 'Events', href: '#' },
   { name: 'Testimonials', href: '#' }
-] as const;
-
-type Link = { name: string; href: string };
+];
 
 type FooterLink = {
   title: string;
@@ -53,9 +53,11 @@ export function Footer(): string {
   return html`
     <footer class="hidden-section grid justify-items-center gap-24 bg-[#333]">
       <div
-        class="main-container flex flex-wrap items-start justify-center gap-24"
+        class="main-container grid grid-cols-2 flex-wrap items-start justify-center gap-12 sm:flex sm:gap-24"
       >
-        <section class="animated-element fade-bottom grid max-w-xs gap-3">
+        <section
+          class="animated-element fade-bottom col-span-2 grid gap-3 sm:max-w-xs"
+        >
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
           <p class="leading-normal text-white/30">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
@@ -64,9 +66,11 @@ export function Footer(): string {
             nostrum nemo.
           </p>
         </section>
-        <section class="animated-element fade-bottom fade-delay-100 grid gap-3">
+        <section
+          class="animated-element fade-bottom fade-delay-100 col-span-2 grid gap-3"
+        >
           <h2 class="font-poppins font-medium text-white/60">Open hours</h2>
-          <ul class="grid gap-1">
+          <ul class="grid justify-start gap-1">
             ${openHours.reduce(
               (acc, { day, open }) =>
                 acc +

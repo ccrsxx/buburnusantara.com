@@ -20,11 +20,12 @@ export function Navbar(): string {
   return html`
     <header id="navbar">
       <div
-        class="main-container flex flex-col justify-center lg:flex-row lg:justify-between lg:gap-4"
+        id="navbar-container"
+        class="main-container flex flex-col justify-center lg:flex-row lg:justify-between lg:gap-4 "
       >
         <div class="flex justify-between">
           <a
-            class="smooth-tab self-start text-xl uppercase tracking-widest text-black lg:self-auto lg:text-white"
+            class="smooth-tab text-xl uppercase tracking-widest text-black lg:text-white"
             href="#"
             >Bubur
           </a>

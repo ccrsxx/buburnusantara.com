@@ -1,10 +1,14 @@
-import { hamburgerButton, navLinksContainer } from '@lib/elements';
+import { hamburgerButton, navLinksContainer, navLinks } from '@lib/elements';
 
 let isNavOpen = false;
 
-hamburgerButton.addEventListener('click', handleNavOpen);
+navLinks.forEach((navLink) =>
+  navLink.addEventListener('click', handleToggleNav)
+);
 
-function handleNavOpen(): void {
+hamburgerButton.addEventListener('click', handleToggleNav);
+
+function handleToggleNav(): void {
   if (isNavOpen) {
     navLinksContainer.classList.remove('active');
     hamburgerButton.classList.remove('active');

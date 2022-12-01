@@ -61,17 +61,15 @@ export function Menu(): string {
       <div
         class="animated-element fade-bottom grid content-center gap-4 text-center"
       >
-        <h2 class="font-poppins text-6xl font-bold text-black">
-          Delicious Menu
-        </h2>
-        <p class="max-w-2xl justify-self-center text-xl font-light">
+        <h2 class="section-title">Delicious Menu</h2>
+        <p class="section-subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           aliquid unde rem odio dolor quae illum reiciendis quia similique
           voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
           nostrum nemo.
         </p>
       </div>
-      <div class="flex items-center justify-center gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-4">
         ${menus.reduce((acc, menu, index) => {
           const indexOfThree = index % 3;
 

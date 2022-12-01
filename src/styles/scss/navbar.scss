@@ -1,49 +1,49 @@
 #navbar {
-  @apply absolute z-10 flex w-full items-center justify-center bg-white/60 px-8 py-6
-         backdrop-blur-md transition-opacity duration-200 lg:bg-inherit lg:backdrop-blur-none;
-}
+  @apply fixed z-10 flex w-full items-center justify-center bg-white/60 px-8 py-4 backdrop-blur-md transition-shadow
+         duration-200 hover:shadow-lg lg:absolute lg:bg-inherit lg:py-6 lg:shadow-none lg:backdrop-blur-none 
+         lg:transition-opacity lg:hover:shadow-none;
 
-#navbar.sleep {
-  @apply transition-all duration-300;
-}
+  #nav-links-container {
+    @apply flex h-0 flex-col items-end gap-2 opacity-0 duration-200 [transition:all_200ms,opacity_150ms]
+           lg:h-auto lg:flex-row lg:items-start lg:gap-8 lg:bg-inherit lg:opacity-100 lg:transition-none;
 
-#navbar.scrolled-middle {
-  @apply fixed -mt-32 py-4 px-8 opacity-0 shadow hover:shadow-lg lg:bg-white/60 lg:backdrop-blur-md;
-}
+    &.active {
+      @apply mt-4 h-48 opacity-100 [transition:all_200ms,opacity_200ms_100ms] lg:mt-0 lg:h-auto;
+    }
 
-#navbar.scrolled-bottom {
-  @apply mt-0 opacity-100;
-
-  * {
-    @apply text-black;
-  }
-
-  nav {
     .nav-link {
-      @apply hover:text-accent-orange/75;
+      @apply uppercase tracking-[0.2em] text-black/75 transition hover:text-accent-orange/75 
+             hover:duration-200 lg:w-auto lg:border-none lg:text-white/75 lg:hover:text-white/90;
     }
 
     .nav-link.active {
-      @apply text-accent-orange;
+      @apply text-accent-orange hover:text-accent-orange/75 lg:text-white lg:hover:text-inherit;
     }
   }
-}
 
-#nav-links-container {
-  @apply flex h-0 flex-col items-center gap-2 opacity-0 transition-all duration-200
-         lg:h-auto lg:flex-row lg:items-start lg:gap-8 lg:bg-inherit lg:opacity-100 lg:transition-none;
-}
+  &.sleep {
+    @apply transition-all duration-300;
+  }
 
-#nav-links-container.active {
-  @apply h-60 opacity-100 lg:h-auto;
-}
+  &.scrolled-middle {
+    @apply fixed py-4 px-8 shadow hover:shadow-lg lg:-mt-32 lg:bg-white/60 lg:opacity-0 lg:backdrop-blur-md;
+  }
 
-.nav-link {
-  @apply w-36 border-b border-black/40 pb-2 uppercase tracking-[0.2em] text-black/75 transition
-         hover:text-accent-orange/75 hover:duration-200 lg:w-auto lg:border-none 
-         lg:text-white/75 lg:hover:text-white/90;
-}
+  &.scrolled-bottom {
+    @apply mt-0 opacity-100;
 
-.nav-link.active {
-  @apply text-black lg:text-white;
+    * {
+      @apply #{'!text-black'};
+    }
+
+    #nav-links-container {
+      .nav-link {
+        @apply #{'hover:!text-accent-orange/75'};
+      }
+
+      .nav-link.active {
+        @apply #{'!text-accent-orange'};
+      }
+    }
+  }
 }

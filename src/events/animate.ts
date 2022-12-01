@@ -34,7 +34,7 @@ const hiddenSectionsObserver = new IntersectionObserver(
         );
       }
     }),
-  { threshold: 0.5 }
+  { threshold: window.innerWidth >= 640 ? 0.5 : 0.25 }
 );
 
 const homeIntersectPointObserver = new IntersectionObserver(

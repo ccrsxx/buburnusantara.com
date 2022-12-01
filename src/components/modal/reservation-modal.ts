@@ -16,7 +16,7 @@ const reservationInputFields: Readonly<InputReserveProps[]> = [
     id: 'email',
     type: 'email',
     label: 'Email',
-    style: 'col-span-2'
+    style: 'sm:col-span-2'
   },
   {
     id: 'people',
@@ -41,7 +41,7 @@ const reservationInputFields: Readonly<InputReserveProps[]> = [
   {
     id: 'message',
     label: 'Message',
-    style: 'col-span-2',
+    style: 'sm:col-span-2',
     useTextArea: true
   }
 ];
@@ -50,8 +50,8 @@ export function ReservationModal(): string {
   return html`
     <div>
       <div id="reservation-modal-backdrop" class="modal-backdrop"></div>
-      <dialog id="reservation-modal">
-        <div class="w-screen max-w-3xl flex-col gap-4 rounded-md bg-white p-4">
+      <dialog id="reservation-modal" class="pb-8 sm:pb-0">
+        <div class="w-[90vw] max-w-3xl flex-col gap-4 rounded-md bg-white p-4">
           <button
             id="reservation-modal-close-button"
             class="ml-auto flex gap-1 text-black/50 transition-colors duration-200 hover:text-black"
@@ -60,7 +60,7 @@ export function ReservationModal(): string {
           </button>
           <form
             id="reservation-modal-form"
-            class="grid grid-cols-2 gap-4 font-poppins"
+            class="grid gap-4 font-poppins sm:grid-cols-2"
           >
             ${reservationInputFields.reduce(
               (acc, inputData) => acc + InputReserve(inputData),
@@ -68,8 +68,8 @@ export function ReservationModal(): string {
             )}
             <button
               id="reservation-modal-submit-button"
-              class="smooth-tab col-span-2 rounded-md bg-yellow-400 p-2 text-white transition duration-200 
-                     hover:brightness-90 disabled:cursor-wait disabled:brightness-90"
+              class="smooth-tab rounded-md bg-yellow-400 p-2 text-white transition duration-200 hover:brightness-90 
+                     disabled:cursor-wait disabled:brightness-90 sm:col-span-2"
             >
               Reserve Now
             </button>

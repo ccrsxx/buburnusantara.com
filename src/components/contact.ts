@@ -69,15 +69,17 @@ export function Contact(): string {
       data-index="5"
     >
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h2 class="font-poppins text-6xl font-bold text-black">Get in Touch</h2>
-        <p class="max-w-2xl justify-self-center text-xl font-light">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           aliquid unde rem odio dolor quae illum reiciendis quia similique
           voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
           nostrum nemo.
         </p>
       </div>
-      <div class="main-container flex justify-between">
+      <div
+        class="main-container flex flex-col items-center justify-between gap-8 md:flex-row md:items-stretch"
+      >
         <form
           id="contact-form"
           class="animated-element fade-left fade-delay-100 grid w-full max-w-2xl items-center gap-4"

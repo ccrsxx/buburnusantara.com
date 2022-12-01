@@ -1,12 +1,12 @@
 .menu-button {
   @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] 
          transition duration-200 hover:brightness-75 hover:delay-[0ms];
-}
 
-.menu-button.active {
-  @apply border-black text-black;
+  &.active {
+    @apply border-black text-black;
+  }
 }
 
 .menu-category {
-  @apply grid translate-y-8 grid-cols-2 gap-8;
+  @apply grid translate-y-8 grid-cols-1 gap-8 md:grid-cols-2;
 }
