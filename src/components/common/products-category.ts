@@ -24,7 +24,7 @@ export function ProductsCategory({
           html`
             <div class="grid grid-cols-[auto,1fr] gap-4">
               <img
-                class="viewable-image h-20 w-20 rounded-full sm:h-28 sm:w-28"
+                class="viewable-image h-20 w-20 rounded-full object-cover sm:h-28 sm:w-28"
                 src="${image}"
                 alt="${name}"
               />
