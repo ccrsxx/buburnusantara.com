@@ -1,1 +1,1 @@
-export type Menu = 'breakfast' | 'lunch' | 'dinner';
+export type Menu = 'utama' | 'topping' | 'minuman';

@@ -3,7 +3,7 @@ import { ProductsCategory } from './common/products-category';
 import type { Menu } from '@lib/types/menu';
 import type { Product } from '@lib/types/product';
 
-const menus: Readonly<Menu[]> = ['breakfast', 'lunch', 'dinner'];
+const menus: Readonly<Menu[]> = ['utama', 'topping', 'minuman'];
 
 const placeholderMenus: Readonly<Product[]> = [
   {
@@ -38,15 +38,15 @@ const clonedPlaceholderMenus = [...(Array(2) as undefined[])].reduce(
 
 const allMenus: Readonly<Category[]> = [
   {
-    category: 'breakfast',
+    category: 'utama',
     products: clonedPlaceholderMenus
   },
   {
-    category: 'lunch',
+    category: 'topping',
     products: clonedPlaceholderMenus
   },
   {
-    category: 'dinner',
+    category: 'minuman',
     products: clonedPlaceholderMenus
   }
 ];
