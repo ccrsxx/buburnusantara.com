@@ -97,7 +97,7 @@
         opacity-100"
     >
       <img
-        class="viewable-image h-52 w-full rounded-t-md object-contain"
+        class="viewable-image h-52 w-full rounded-t-md object-cover"
         src="${s}"
         alt="${e}"
       />
