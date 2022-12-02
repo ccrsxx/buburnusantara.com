@@ -5,6 +5,7 @@ export type InputFieldProps = {
   type?: 'text' | 'email' | 'number' | 'date' | 'time' | 'tel';
   label: string;
   style?: string;
+  customId?: string;
   useTextArea?: boolean;
 };
 
@@ -13,6 +14,7 @@ export function InputField({
   type,
   label,
   style,
+  customId,
   useTextArea
 }: InputFieldProps): string {
   return html`
@@ -23,7 +25,7 @@ export function InputField({
       ${useTextArea
         ? html`
             <textarea
-              id="${id}"
+              id="${customId ?? id}"
               name="${id}"
               rows="7"
               class="peer mt-6 w-full resize-y bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
@@ -34,7 +36,7 @@ export function InputField({
         : html`
             <input
               class="peer mt-6 w-full bg-inherit px-4 pb-2 text-black placeholder-transparent outline-none transition"
-              id="${id}"
+              id="${customId ?? id}"
               name="${id}"
               type="${type ?? 'text'}"
               placeholder=" "
@@ -42,7 +44,7 @@ export function InputField({
             />
           `}
       <label
-        for="${id}"
+        for="${customId ?? id}"
         class="text-light-secondary dark:text-dark-secondary absolute left-4 translate-y-1 text-sm transition-all 
                peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-lg peer-placeholder-shown:text-inherit 
                peer-focus:translate-y-1 peer-focus:text-sm peer-focus:text-blue-400"

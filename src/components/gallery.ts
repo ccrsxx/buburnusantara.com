@@ -47,7 +47,7 @@ export function Gallery(): string {
             acc +
             html`
               <img
-                class="viewable-image h-full w-full cursor-pointer rounded-md"
+                class="viewable-image h-full w-full cursor-pointer rounded-md object-contain"
                 src="${image}"
                 alt="${name}"
               />

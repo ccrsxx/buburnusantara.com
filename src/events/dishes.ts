@@ -47,7 +47,7 @@ function highlightMenuButton(menuId: Menu): void {
 
 function toggleMenuCategory(menuId: Menu): void {
   menuCategories.forEach((menuCategory) => {
-    const menuCategoryId = menuCategory.id as Menu;
+    const menuCategoryId = menuCategory.dataset.category as Menu;
 
     if (menuCategoryId === menuId) {
       if (!prevMenu) menuCategory.style.display = '';

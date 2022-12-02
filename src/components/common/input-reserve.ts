@@ -10,17 +10,18 @@ export function InputReserve({
   type,
   style,
   label,
+  customId,
   useSelect,
   useTextArea
 }: InputReserveProps): string {
   return html`
     <div class="${style ?? ''} grid gap-1">
-      <label class="self-start" for="${id}">${label}</label>
+      <label class="self-start" for="${customId ?? id}">${label}</label>
       ${useSelect
         ? html`
             <select
               class="smooth-tab rounded-md bg-white p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
-              name="${id}"
+              name="${customId ?? id}"
               id="${id}"
               required
             >
@@ -36,7 +37,7 @@ export function InputReserve({
         : useTextArea
         ? html`
             <textarea
-              id="${id}"
+              id="${customId ?? id}"
               name="${id}"
               rows="7"
               class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"
@@ -45,7 +46,7 @@ export function InputReserve({
           `
         : html`
             <input
-              id="${id}"
+              id="${customId ?? id}"
               type="${type ?? 'text'}"
               name="${id}"
               class="smooth-tab rounded-md p-2 ring-2 ring-slate-200 focus-visible:ring-blue-400"

@@ -20,8 +20,9 @@ export function ImageModal(): string {
                      focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
               target="_blank"
               rel="noreferrer"
+              href="#"
               onclick="event.stopPropagation()"
-            >
+              >Placeholder link
             </a>
           </div>
           <a
@@ -29,6 +30,7 @@ export function ImageModal(): string {
                    underline-offset-2 transition hover:text-white hover:underline hover:decoration-white focus-visible:text-white"
             target="_blank"
             rel="noreferrer"
+            href="#"
             onclick="event.stopPropagation()"
           >
             Open original

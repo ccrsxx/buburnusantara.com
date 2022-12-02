@@ -14,9 +14,9 @@ export function ProductsCategory({
 }: ProductCategoryProps): string {
   return html`
     <div
-      id=${category}
       style="display: none;"
       class="menu-category animated-element fade-bottom fade-delay-400"
+      data-category="${category}"
     >
       ${products.reduce(
         (acc, { name, price, image, description }) =>
@@ -29,15 +29,15 @@ export function ProductsCategory({
                 alt="${name}"
               />
               <div class="grid gap-2">
-                <h6
+                <h3
                   class="font-poppins text-lg font-bold text-black sm:text-xl"
                 >
                   ${name}
-                </h6>
+                </h3>
                 <p>${description}</p>
-                <h5 class="font-poppins text-xl text-accent-orange sm:text-2xl">
+                <p class="font-poppins text-xl text-accent-orange sm:text-2xl">
                   ${formatCurrency(price)}
-                </h5>
+                </p>
               </div>
             </div>
           `,

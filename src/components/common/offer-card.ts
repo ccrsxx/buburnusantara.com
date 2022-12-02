@@ -26,13 +26,13 @@ export function OfferCard({
         opacity-100"
     >
       <img
-        class="viewable-image h-52 w-full rounded-t-md"
+        class="viewable-image h-52 w-full rounded-t-md object-cover"
         src="${image}"
         alt="${name}"
       />
-      <div class="grid gap-2 p-8 text-center [&>h5]:font-poppins">
-        <h5 class="text-xl text-accent-orange">${formatCurrency(price)}</h5>
-        <h5 class="text-2xl font-bold text-black">${name}</h5>
+      <div class="grid gap-2 p-8 text-center [&>h3]:font-poppins">
+        <p class="text-xl text-accent-orange">${formatCurrency(price)}</p>
+        <h3 class="text-2xl font-bold text-black">${name}</h3>
         <p>${description}</p>
       </div>
     </div>

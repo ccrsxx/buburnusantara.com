@@ -51,12 +51,14 @@ const contactInputFields: Readonly<InputFieldProps[]> = [
   },
   {
     id: 'email',
+    type: 'email',
     label: 'Email',
-    type: 'email'
+    customId: 'contact-email'
   },
   {
     id: 'message',
     label: 'Message',
+    customId: 'contact-message',
     useTextArea: true
   }
 ];
@@ -110,6 +112,7 @@ export function Contact(): string {
           <iframe
             class="h-60 w-full rounded-md bg-main-background"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.989671962544!2d106.71504691475391!3d-6.132089195560011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d4011a5293f%3A0x3af5a7556c06e77!2sBubur%20Ayam%20Kampung%20Nusantara!5e0!3m2!1sen!2sid!4v1669432828948!5m2!1sen!2sid&iwloc=near"
+            title="Bubur Nusantara Location"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
