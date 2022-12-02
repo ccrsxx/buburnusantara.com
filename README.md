@@ -17,7 +17,7 @@ Here are the instructions to get you a copy of the project up and running on you
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/ccrsxx/bubur-nusantara.git
+   git clone https://github.com/ccrsxx/buburnusantara.com.git
    ```
 
 2. Install dependencies
