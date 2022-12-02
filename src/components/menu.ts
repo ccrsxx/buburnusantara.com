@@ -5,49 +5,79 @@ import type { Product } from '@lib/types/product';
 
 const menus: Readonly<Menu[]> = ['utama', 'topping', 'minuman'];
 
-const placeholderMenus: Readonly<Product[]> = [
-  {
-    name: 'Salted Fried Chicken',
-    price: 420_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/menu/breakfast/breakfast-1.webp'
-  },
-  {
-    name: 'Italian Sauce Mushroom',
-    price: 320_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/menu/breakfast/breakfast-2.webp'
-  },
-  {
-    name: 'Fried Potato with Garlic',
-    price: 150_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/menu/breakfast/breakfast-3.webp'
-  }
-];
-
 type Category = { category: Menu; products: Product[] };
-
-const clonedPlaceholderMenus = [...(Array(2) as undefined[])].reduce(
-  (acc) => [...acc, ...placeholderMenus],
-  [] as Product[]
-);
 
 const allMenus: Readonly<Category[]> = [
   {
     category: 'utama',
-    products: clonedPlaceholderMenus
+    products: [
+      {
+        name: 'Bubur Ayam Kampung',
+        price: 25_000,
+        description:
+          'Bubur dengan daging ayam pilihan ditambah cakwe, dibalur dengan minyak wijen impor yang spesial dibuat di Malaysia menghasilkan bubur yang bukan hanya mengenyangkan, tetapi juga bermakna di hati.',
+        image: '/assets/menu/utama/utama-1.jpg'
+      },
+      {
+        name: 'Bubur Polos',
+        price: 18_000,
+        description:
+          'Bubur polos yang diproses dengan kaldu ayam kampung pilihan, dipadu dengan minyak wijen pilihan menghasilkan bubur yang sangat bernutrisi dan nikmat',
+        image: '/assets/menu/utama/utama-2.jpg'
+      }
+    ]
   },
   {
     category: 'topping',
-    products: clonedPlaceholderMenus
+    products: [
+      {
+        name: 'Salted Fried Chicken',
+        price: 420_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-1.webp'
+      },
+      {
+        name: 'Italian Sauce Mushroom',
+        price: 320_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-2.webp'
+      },
+      {
+        name: 'Fried Potato with Garlic',
+        price: 150_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-3.webp'
+      }
+    ]
   },
   {
     category: 'minuman',
-    products: clonedPlaceholderMenus
+    products: [
+      {
+        name: 'Salted Fried Chicken',
+        price: 420_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-1.webp'
+      },
+      {
+        name: 'Italian Sauce Mushroom',
+        price: 320_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-2.webp'
+      },
+      {
+        name: 'Fried Potato with Garlic',
+        price: 150_000,
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
+        image: '/assets/menu/breakfast/breakfast-3.webp'
+      }
+    ]
   }
 ];
 
