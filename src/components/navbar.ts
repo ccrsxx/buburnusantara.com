@@ -21,15 +21,15 @@ export function Navbar(): string {
     <header id="navbar">
       <div
         id="navbar-container"
-        class="main-container flex flex-col justify-center lg:flex-row lg:justify-between lg:gap-4 "
+        class="main-container flex flex-col justify-center lg:flex-row lg:justify-between lg:gap-4"
       >
-        <div class="flex justify-between">
+        <div class="flex items-center justify-between">
           <a
-            class="smooth-tab text-xl uppercase tracking-widest text-black lg:text-white"
+            class="smooth-tab rounded-md text-xl uppercase tracking-widest text-black lg:text-white"
             href="#"
             >Bubur
           </a>
-          <button id="hamburger-button">
+          <button id="hamburger-button" class="smooth-tab rounded-md p-1">
             <i class="container">
               <span class="top"></span>
               <span class="middle"></span>
@@ -37,13 +37,13 @@ export function Navbar(): string {
             </i>
           </button>
         </div>
-        <nav id="nav-links-container">
+        <nav id="nav-links-container" tabindex="-1">
           ${navLinks.reduce(
             (acc, { name, href }) =>
               acc +
-              html`
-                <a class="nav-link smooth-tab" href="${href}"> ${name} </a>
-              `,
+              html`<a class="nav-link smooth-tab rounded-md" href="${href}"
+                >${name}</a
+              >`,
             ''
           )}
         </nav>

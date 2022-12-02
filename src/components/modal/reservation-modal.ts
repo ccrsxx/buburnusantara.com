@@ -31,12 +31,14 @@ const reservationInputFields: Readonly<InputReserveProps[]> = [
   {
     id: 'date',
     type: 'date',
-    label: 'Date'
+    label: 'Date',
+    style: '[&>input]:w-full'
   },
   {
     id: 'time',
     type: 'time',
-    label: 'Time'
+    label: 'Time',
+    style: '[&>input]:w-full'
   },
   {
     id: 'message',
@@ -54,7 +56,8 @@ export function ReservationModal(): string {
         <div class="w-[90vw] max-w-3xl flex-col gap-4 rounded-md bg-white p-4">
           <button
             id="reservation-modal-close-button"
-            class="ml-auto flex gap-1 text-black/50 transition-colors duration-200 hover:text-black"
+            class="smooth-tab ml-auto flex gap-1 rounded-md text-black/50 
+                   transition-colors duration-200 hover:text-black focus-visible:text-black"
           >
             CLOSE ${CustomIcon({ iconName: 'XMarkIcon' })}
           </button>

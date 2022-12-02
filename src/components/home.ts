@@ -23,8 +23,9 @@ export function Home(): string {
       <div class="animated-element fade-bottom fade-delay-200">
         <button
           id="reservation-modal-open-button"
-          class="w-full rounded border-2 border-white/80 px-8 py-4 font-poppins font-bold uppercase text-white transition-colors
-                 duration-200 hover:border-white hover:bg-white hover:text-black sm:w-auto"
+          class="smooth-tab w-full rounded border-2 border-white/80 px-8 py-4 font-poppins font-bold uppercase text-white
+                 transition-colors duration-200 hover:border-white hover:bg-white hover:text-black 
+                 focus-visible:border-white focus-visible:bg-white focus-visible:text-black sm:w-auto"
         >
           Reserve a table
         </button>

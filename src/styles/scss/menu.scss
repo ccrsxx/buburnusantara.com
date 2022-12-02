@@ -1,6 +1,6 @@
 .menu-button {
-  @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] 
-         transition duration-200 hover:brightness-75 hover:delay-[0ms];
+  @apply border-2 border-[#ccc] px-4 py-2 uppercase text-[#ccc] transition duration-200
+         hover:brightness-75 hover:delay-[0ms] focus-visible:brightness-75;
 
   &.active {
     @apply border-black text-black;

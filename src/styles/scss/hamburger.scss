@@ -40,15 +40,31 @@
     }
   }
 
-  &.active:hover > i > span {
+  &.active:hover > * > *,
+  &.active:focus-visible > * > * {
     background-color: #3c3c3cb3;
     transition: top 250ms, background-color 250ms, transform 250ms;
   }
 
-  &:hover .top {
+  &:hover .top,
+  &:focus-visible .top {
     top: 0;
     left: 0;
     transform: translate(4px);
+  }
+
+  &:hover .middle,
+  &:focus-visible .middle {
+    top: 6px;
+    left: 0;
+    transform: translate(0);
+  }
+
+  &:hover .bottom,
+  &:focus-visible .bottom {
+    top: 12px;
+    left: 0;
+    transform: translate(8px);
   }
 
   &.active .top {
@@ -56,21 +72,9 @@
     transform: translate(0) rotate(225deg);
   }
 
-  &:hover .middle {
-    top: 6px;
-    left: 0;
-    transform: translate(0);
-  }
-
   &.active .middle {
     top: 6px;
     transform: translate(16px);
-  }
-
-  &:hover .bottom {
-    top: 12px;
-    left: 0;
-    transform: translate(8px);
   }
 
   &.active .bottom {

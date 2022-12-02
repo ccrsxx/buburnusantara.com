@@ -4,20 +4,22 @@
          lg:transition-opacity lg:hover:shadow-none;
 
   #nav-links-container {
-    @apply flex h-0 flex-col items-end gap-2 opacity-0 duration-200 [transition:all_200ms,opacity_150ms]
-           lg:h-auto lg:flex-row lg:items-start lg:gap-8 lg:bg-inherit lg:opacity-100 lg:transition-none;
-
-    &.active {
-      @apply mt-4 h-48 opacity-100 [transition:all_200ms,opacity_200ms_100ms] lg:mt-0 lg:h-auto;
-    }
+    @apply invisible flex h-0 flex-col items-end gap-2 opacity-0 duration-200 
+           [transition:all_200ms,opacity_150ms,visibility_0ms_150ms] lg:h-auto 
+           lg:flex-row lg:items-start lg:gap-8 lg:bg-inherit lg:opacity-100 lg:transition-none;
 
     .nav-link {
-      @apply uppercase tracking-[0.2em] text-black/75 transition hover:text-accent-orange/75 
-             hover:duration-200 lg:w-auto lg:border-none lg:text-white/75 lg:hover:text-white/90;
+      @apply uppercase tracking-[0.2em] text-black/75 transition-colors
+             hover:text-accent-orange/75 hover:duration-200 focus-visible:text-accent-orange/75 lg:visible
+             lg:text-white/75 lg:hover:text-white/90 lg:focus-visible:text-white/90;
+
+      &.active {
+        @apply text-accent-orange lg:text-white;
+      }
     }
 
-    .nav-link.active {
-      @apply text-accent-orange hover:text-accent-orange/75 lg:text-white lg:hover:text-inherit;
+    &.active {
+      @apply visible mt-4 h-48 opacity-100 [transition:all_200ms,opacity_500ms_100ms,visibility_0ms_0ms] lg:mt-0 lg:h-auto;
     }
   }
 
@@ -33,16 +35,16 @@
     @apply mt-0 opacity-100;
 
     * {
-      @apply #{'!text-black'};
+      @apply text-black #{!important};
     }
 
     #nav-links-container {
       .nav-link {
-        @apply #{'hover:!text-accent-orange/75'};
-      }
+        @apply hover:text-accent-orange/75 focus-visible:text-accent-orange/75 #{!important};
 
-      .nav-link.active {
-        @apply #{'!text-accent-orange'};
+        &.active {
+          @apply text-accent-orange #{!important};
+        }
       }
     }
   }

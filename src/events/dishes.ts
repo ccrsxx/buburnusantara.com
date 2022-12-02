@@ -1,5 +1,5 @@
-import { menuButtons, menuCategories } from '../lib/elements';
-import type { Menu } from '../lib/types/menu';
+import { menuButtons, menuCategories } from '@lib/elements';
+import type { Menu } from '@lib/types/menu';
 
 const cachedCurrentMenu = localStorage.getItem('currentMenu') as Menu;
 
@@ -35,8 +35,13 @@ function handleChangeMenu(menuId: Menu) {
 function highlightMenuButton(menuId: Menu): void {
   menuButtons.forEach((menuButton) => {
     const menuButtonId = menuButton.id as Menu;
-    if (menuButtonId === menuId) menuButton.classList.add('active');
-    else menuButton.classList.remove('active');
+    if (menuButtonId === menuId) {
+      menuButton.classList.add('active');
+      menuButton.tabIndex = -1;
+    } else {
+      menuButton.classList.remove('active');
+      menuButton.tabIndex = 0;
+    }
   });
 }
 

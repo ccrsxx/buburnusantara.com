@@ -34,7 +34,9 @@ export function ToastModal(): string {
             <p id="toast-modal-description"></p>
           </div>
           <form method="dialog">
-            <button class="rounded-md  bg-green-400 px-3 py-2 text-white">
+            <button
+              class="smooth-tab rounded-md bg-green-400 px-3 py-2 text-white"
+            >
               Okay
             </button>
           </form>

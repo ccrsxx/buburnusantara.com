@@ -84,7 +84,9 @@ export function Menu(): string {
                   ? 'fade-delay-200'
                   : 'fade-delay-300'}"
               >
-                <button class="menu-button" id="${menu}">${menu}</button>
+                <button class="menu-button smooth-tab" id="${menu}">
+                  ${menu}
+                </button>
               </div>
             `
           );

@@ -14,31 +14,31 @@ type ContactInfo = {
 const contactInfos: Readonly<ContactInfo[]> = [
   {
     href: 'https://goo.gl/maps/PxD3wGwbXDKQP5ML9',
-    style: 'hover:bg-red-400',
+    style: 'hover:bg-red-400 focus-visible:bg-red-400',
     title: 'Location',
     iconName: 'MapPinIcon'
   },
   {
     href: 'mailto:site@buburnusantara.com',
-    style: 'hover:bg-blue-400',
+    style: 'hover:bg-blue-400 focus-visible:bg-blue-400',
     title: 'Email',
     iconName: 'AtIcon'
   },
   {
     href: 'tel:+6285692807048',
-    style: 'hover:bg-green-400',
+    style: 'hover:bg-green-400 focus-visible:bg-green-400',
     title: 'Phone',
     iconName: 'PhoneIcon'
   },
   {
     href: 'https://www.instagram.com/buburnusantara.id',
-    style: 'hover:bg-rose-400',
+    style: 'hover:bg-rose-400 focus-visible:bg-rose-400',
     title: 'Instagram',
     iconName: 'InstagramIcon'
   },
   {
     href: 'https://wa.me/6285692807048',
-    style: 'hover:bg-green-400',
+    style: 'hover:bg-green-400 focus-visible:bg-green-400',
     title: 'WhatsApp',
     iconName: 'WhatsAppIcon'
   }
@@ -90,14 +90,16 @@ export function Contact(): string {
           )}
           <button
             id="contact-submit-button"
-            class="group ml-auto flex w-full max-w-[175px] items-center gap-2 rounded-md bg-accent-orange px-4 py-3 text-white
-                   shadow transition duration-200 enabled:hover:-translate-y-1 enabled:hover:shadow-xl 
-                   enabled:hover:brightness-110 disabled:cursor-wait disabled:brightness-90"
+            class="smooth-tab group ml-auto flex w-full max-w-[175px] items-center gap-2 rounded-md bg-accent-orange px-4 py-3
+                   text-white shadow transition duration-200 enabled:hover:-translate-y-1 enabled:hover:shadow-xl 
+                   enabled:hover:brightness-110 enabled:focus-visible:-translate-y-1 enabled:focus-visible:shadow-xl 
+                   enabled:focus-visible:brightness-110 disabled:cursor-wait disabled:brightness-90"
           >
             Send Message
             ${CustomIcon({
               style: `h-6 w-6 transition-transform duration-200 group-hover:-translate-y-1 
-                      group-hover:translate-x-0.5 group-hover:-rotate-[30deg]`,
+                      group-hover:translate-x-0.5 group-hover:-rotate-[30deg] group-focus-visible:-translate-y-1 
+                      group-focus-visible:translate-x-0.5 group-focus-visible:-rotate-[30deg]`,
               iconName: 'PaperAirplaneIcon'
             })}
           </button>
@@ -112,6 +114,7 @@ export function Contact(): string {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            tabindex="-1"
           ></iframe>
           <div class="flex flex-wrap justify-center gap-4">
             ${contactInfos.reduce(
@@ -120,8 +123,9 @@ export function Contact(): string {
                 html`
                   <a
                     href="${href}"
-                    class="${style} flex gap-2 rounded-md bg-main-background p-2 text-black/75 shadow transition
-                           duration-300 hover:-translate-y-2 hover:text-white hover:shadow-xl"
+                    class="${style} smooth-tab flex gap-2 rounded-md bg-main-background p-2 text-black/75 shadow
+                           transition duration-300 hover:-translate-y-2 hover:text-white hover:shadow-xl
+                           focus-visible:-translate-y-2 focus-visible:text-white focus-visible:shadow-xl"
                     target="_blank"
                     rel="noreferrer"
                   >

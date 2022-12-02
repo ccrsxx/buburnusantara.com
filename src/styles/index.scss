@@ -59,6 +59,6 @@
   }
 
   .smooth-tab {
-    @apply outline-none focus-visible:ring-2 focus-visible:transition-shadow focus-visible:duration-200;
+    @apply #{'focus-visible:!transition'} outline-none focus-visible:ring-2 focus-visible:duration-200;
   }
 }
