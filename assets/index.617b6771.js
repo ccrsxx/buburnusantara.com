@@ -486,7 +486,8 @@
                   ${s.reduce((n,{name:a,href:o})=>n+C`
                         <a
                           class="smooth-tab justify-self-start rounded-md text-white/30 transition
-                                 duration-200 hover:text-accent-orange hover:transition"
+                                 duration-200 hover:text-accent-orange hover:transition 
+                                 focus-visible:text-accent-orange"
                           href="${o}"
                         >
                           ${a}
