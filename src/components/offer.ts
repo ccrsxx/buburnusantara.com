@@ -4,32 +4,27 @@ import type { Product } from '@lib/types/product';
 
 const offers: Readonly<Product[]> = [
   {
-    name: 'Beef with Sausage',
-    price: 240_000,
+    name: 'Bubur Ayam Kampung',
+    price: 25_000,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-1.webp'
+    image: '/assets/offer/offer-2.jpg'
   },
   {
-    name: 'Eggs with Garlic',
-    price: 450_000,
+    name: 'Bubur Polos',
+    price: 18_000,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-2.webp'
+    image: '/assets/offer/offer-1.jpg'
   },
   {
-    name: 'Beef Ribs',
-    price: 150_000,
+    name: 'Telur Asin',
+    price: 8_000,
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-3.webp'
+    image: '/assets/offer/offer-3.jpg'
   }
 ];
-
-const placeholderOffers = [...(Array(3) as undefined[])].reduce(
-  (acc) => [...acc, ...offers],
-  [] as Product[]
-);
 
 export function Offer(): string {
   return html`
@@ -47,7 +42,7 @@ export function Offer(): string {
         class="swiper animated-element fade-bottom main-container fade-delay-100 !pb-12"
       >
         <div class="swiper-wrapper cursor-grab select-none">
-          ${placeholderOffers.reduce(
+          ${offers.reduce(
             (acc, product, index) => acc + OfferCard({ ...product, index }),
             ''
           )}
