@@ -36,6 +36,21 @@
             "group": "builtin",
             "position": "before",
             "patternOptions": { "matchBase": true }
+          },
+          {
+            "pattern": "@lib/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@constants/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@components/**",
+            "group": "external",
+            "position": "after"
           }
         ],
         "warnOnUnassignedImports": true,
