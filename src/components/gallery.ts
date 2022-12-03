@@ -11,10 +11,8 @@ export function Gallery(): string {
       <div class="animated-element fade-bottom grid gap-4 text-center">
         <h2 class="section-title">Gallery</h2>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          aliquid unde rem odio dolor quae illum reiciendis quia similique
-          voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-          nostrum nemo.
+          Ini adalah cuplikan dari beberapa produk kami, yang pastinya dapat
+          kamu pesan melalui aplikasi kesayangan kamu
         </p>
       </div>
       <div

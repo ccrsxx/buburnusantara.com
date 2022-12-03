@@ -71,12 +71,11 @@ export function Contact(): string {
       data-index="5"
     >
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h2 class="section-title">Get in Touch</h2>
+        <h2 class="section-title">Hubungi Kami</h2>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          aliquid unde rem odio dolor quae illum reiciendis quia similique
-          voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-          nostrum nemo.
+          Halo pelanggan tersayang bubur ayam kampung nusantara ! ada kritik,
+          keluhan, saran, atau pertanyaan ? hubungi kami melalui form dibawah
+          ini
         </p>
       </div>
       <div

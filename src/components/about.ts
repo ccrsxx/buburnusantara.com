@@ -14,18 +14,20 @@ export function About(): string {
         <div
           class="animated-element fade-left grid max-w-2xl gap-4 lg:max-w-md [&>p]:text-lg"
         >
-          <h2 class="section-title mb-4 text-center lg:text-left">Welcome</h2>
+          <h2 class="section-title mb-4 text-center lg:text-left">
+            Selamat Datang
+          </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            aliquid unde rem odio dolor quae illum reiciendis quia similique
-            voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-            nostrum nemo.
+            Selamat Datang di Bubur Ayam Kampung Nusantara, berdiri sejak 2018
+            kami menghimpun lebih dari ribuan pelanggan dari berbagai daerah.
+            Kami berkomitmen untuk tetap menyajikan rasa dan kualitas yang sama
+            setiap harinya untuk mencapai kepuasan pelanggan.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            est, ab suscipit quis voluptates ut, alias fugiat architecto
-            corporis voluptatum asperiores obcaecati iste nemo eius ea maxime
-            optio officiis hic.
+            Menggunakan ayam kampung pilihan dan beras lokal pilihan kami
+            menyajikan bubur yang tidak hanya mengenyangkan tetapi juga memiliki
+            kualitas rasa yang tiada duanya. Untuk itu kami tunggu kehadirannya
+            di Bubur Ayam Kampung Nusantara !
           </p>
         </div>
         <img

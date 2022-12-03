@@ -74,7 +74,14 @@ const allMenus: Readonly<Category[]> = [
         name: 'Xtra Ayam Kampung',
         price: 15_000,
         description:
-          'Ayam kampung yang dibumbui dengan bumbu khas yang mempunyai pilihan kecap maupun biasa',
+          'Ayam kampung yang dibumbui dengan bumbu dan rempah pilihan menghasilkan rasa asin dan gurih',
+        image: '/assets/menu/placeholder.webp'
+      },
+      {
+        name: 'Xtra Ayam Kampung Kecap',
+        price: 15_000,
+        description:
+          'Ayam kampung yang dibumbui dengan perpaduan kecap menghasilkan rasa yang manis dan gurih',
         image: '/assets/menu/placeholder.webp'
       }
     ]

@@ -12,12 +12,10 @@ export function Menu(): string {
       <div
         class="animated-element fade-bottom grid content-center gap-4 text-center"
       >
-        <h2 class="section-title">Delicious Menu</h2>
+        <h2 class="section-title">Menu</h2>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          aliquid unde rem odio dolor quae illum reiciendis quia similique
-          voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-          nostrum nemo.
+          Bukan hanya menu favorit, kami juga menawarkan banyak menu pilihan
+          lainnya yang dapat dipilih dan di sajikan bersamaan dengan bubur
         </p>
       </div>
       <div class="flex flex-wrap items-center justify-center gap-4">

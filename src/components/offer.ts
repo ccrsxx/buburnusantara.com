@@ -6,12 +6,11 @@ export function Offer(): string {
   return html`
     <section id="offer" class="hidden-section grid gap-12" data-index="2">
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h2 class="section-title">Our Offer This Summer</h2>
+        <h2 class="section-title">Menu Favorit</h2>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          aliquid unde rem odio dolor quae illum reiciendis quia similique
-          voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-          nostrum nemo.
+          Ini adalah menu favorit yang sangat disukai oleh pelanggan kami.
+          Perpaduan bubur kami dengan telur asin pilihan menghasilkan rasa yang
+          dipercaya oleh banyak pelanggan kami
         </p>
       </div>
       <div
