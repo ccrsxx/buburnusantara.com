@@ -1,26 +1,5 @@
 import { html } from '@lib/utils';
-
-type ProductImage = Record<'name' | 'image', string>;
-
-const productImages: Readonly<ProductImage[]> = [
-  {
-    name: 'Breakfast 1',
-    image: '/assets/menu/breakfast/breakfast-1.webp'
-  },
-  {
-    name: 'Breakfast 2',
-    image: '/assets/menu/breakfast/breakfast-2.webp'
-  },
-  {
-    name: 'Breakfast 3',
-    image: '/assets/menu/breakfast/breakfast-3.webp'
-  }
-];
-
-const placeholderProductImages = [...(Array(2) as undefined[])].reduce(
-  (acc) => [...acc, ...productImages],
-  [] as ProductImage[]
-);
+import { productImages } from '@constants/gallery';
 
 export function Gallery(): string {
   return html`
@@ -42,12 +21,12 @@ export function Gallery(): string {
         class="animated-element fade-bottom main-container fade-delay-100
                grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 sm:gap-4"
       >
-        ${placeholderProductImages.reduce(
+        ${productImages.reduce(
           (acc, { name, image }) =>
             acc +
             html`
               <img
-                class="viewable-image h-full w-full cursor-pointer rounded-md object-contain"
+                class="viewable-image aspect-square w-full cursor-pointer rounded-md object-cover"
                 src="${image}"
                 alt="${name}"
               />

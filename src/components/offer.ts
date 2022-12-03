@@ -1,30 +1,6 @@
 import { html } from '@lib/utils';
+import { offers } from '@constants/offer';
 import { OfferCard } from './common/offer-card';
-import type { Product } from '@lib/types/product';
-
-const offers: Readonly<Product[]> = [
-  {
-    name: 'Bubur Ayam Kampung',
-    price: 25_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-2.jpg'
-  },
-  {
-    name: 'Bubur Polos',
-    price: 18_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-1.jpg'
-  },
-  {
-    name: 'Telur Asin',
-    price: 8_000,
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-    image: '/assets/offer/offer-3.jpg'
-  }
-];
 
 export function Offer(): string {
   return html`

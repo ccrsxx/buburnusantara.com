@@ -1,1 +1,1 @@
-export type Menu = 'utama' | 'topping' | 'minuman';
+export type Menu = 'utama' | 'topping' | 'minuman' | 'lainnya';

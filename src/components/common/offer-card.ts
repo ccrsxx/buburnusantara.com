@@ -30,9 +30,11 @@ export function OfferCard({
         src="${image}"
         alt="${name}"
       />
-      <div class="grid gap-2 p-8 text-center [&>h3]:font-poppins">
-        <p class="text-xl text-accent-orange">${formatCurrency(price)}</p>
-        <h3 class="text-2xl font-bold text-black">${name}</h3>
+      <div class="grid gap-2 p-8 text-center">
+        <p class="font-poppins text-xl text-accent-orange">
+          ${formatCurrency(price)}
+        </p>
+        <h3 class="font-poppins text-2xl font-bold text-black">${name}</h3>
         <p>${description}</p>
       </div>
     </div>

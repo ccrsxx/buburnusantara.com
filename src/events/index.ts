@@ -1,5 +1,5 @@
-import './navigation';
 import './animate';
+import './navigation';
 import './reserve';
 import './swiper';
 import './dishes';

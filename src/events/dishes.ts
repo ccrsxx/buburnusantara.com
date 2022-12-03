@@ -3,7 +3,7 @@ import type { Menu } from '@lib/types/menu';
 
 const cachedCurrentMenu = localStorage.getItem('currentMenu') as Menu;
 
-let currentMenu: Menu = cachedCurrentMenu ?? 'breakfast';
+let currentMenu: Menu = cachedCurrentMenu ?? 'utama';
 let prevMenu: Menu;
 
 let isFirstRender = true;
