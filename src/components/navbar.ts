@@ -1,6 +1,12 @@
 import { html } from '@lib/utils';
 
-type ValidSection = 'home' | 'about' | 'offer' | 'menu' | 'gallery' | 'contact';
+type ValidSection =
+  | 'home'
+  | 'about'
+  | 'favorite'
+  | 'menu'
+  | 'gallery'
+  | 'contact';
 
 type NavLink = {
   name: Capitalize<ValidSection>;
@@ -10,7 +16,7 @@ type NavLink = {
 const navLinks: Readonly<NavLink[]> = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Offer', href: '#offer' },
+  { name: 'Favorite', href: '#offer' },
   { name: 'Menu', href: '#menu' },
   { name: 'Gallery', href: '#gallery' },
   { name: 'Contact', href: '#contact' }
@@ -27,7 +33,7 @@ export function Navbar(): string {
           <a
             class="smooth-tab rounded-md text-xl uppercase tracking-widest text-black lg:text-white"
             href="#"
-            >Bubur
+            >Bubur Nusantara
           </a>
           <button id="hamburger-button" class="smooth-tab rounded-md p-1">
             <i class="container">

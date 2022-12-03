@@ -34,7 +34,7 @@ export function About(): string {
           class="animated-element fade-right viewable-image h-72 w-[448px]
                  rounded-md object-cover duration-500 xl:h-96 xl:w-[576px]"
           src="/assets/about-chef.webp"
-          alt="Chef"
+          alt="Founder & Chef"
         />
       </div>
     </section>

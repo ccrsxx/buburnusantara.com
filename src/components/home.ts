@@ -13,12 +13,12 @@ export function Home(): string {
       <h1
         class="animated-element fade-bottom font-poppins text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl"
       >
-        Welcome to Bubur
+        Welcome to Bubur Nusantara
       </h1>
       <h2
         class="animated-element fade-bottom fade-delay-100 text-xl font-light text-white/90"
       >
-        Come and eat well with our delicious & healthy foods.
+        Bubur Ter-yummiest in Town
       </h2>
       <div class="animated-element fade-bottom fade-delay-200">
         <button

@@ -3,7 +3,7 @@ import type { Product } from '@lib/types/product';
 
 type Category = { category: Menu; products: Product[] };
 
-const menus: Readonly<Menu[]> = ['utama', 'topping', 'minuman', 'lainnya'];
+const menus: Readonly<Menu[]> = ['utama', 'topping', 'lainnya'];
 
 const allMenus: Readonly<Category[]> = [
   {
@@ -82,32 +82,6 @@ const allMenus: Readonly<Category[]> = [
         price: 15_000,
         description:
           'Ayam kampung yang dibumbui dengan perpaduan kecap menghasilkan rasa yang manis dan gurih',
-        image: '/assets/menu/placeholder.webp'
-      }
-    ]
-  },
-  {
-    category: 'minuman',
-    products: [
-      {
-        name: 'Salted Fried Chicken',
-        price: 420_000,
-        description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-        image: '/assets/menu/placeholder.webp'
-      },
-      {
-        name: 'Italian Sauce Mushroom',
-        price: 320_000,
-        description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
-        image: '/assets/menu/placeholder.webp'
-      },
-      {
-        name: 'Fried Potato with Garlic',
-        price: 150_000,
-        description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut necessitatibus obcaecati nobis suscipitiste, blanditiis quam explicabo doloremque eveniet.',
         image: '/assets/menu/placeholder.webp'
       }
     ]

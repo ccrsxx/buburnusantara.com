@@ -35,7 +35,7 @@ export function Menu(): string {
           );
         }, '')}
       </div>
-      <div class="main-container md:min-h-[580px]">
+      <div class="main-container md:min-h-[616px]">
         ${allMenus.reduce(
           (acc, { category, products }) =>
             acc + ProductsCategory({ category, products }),

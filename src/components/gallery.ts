@@ -9,7 +9,7 @@ export function Gallery(): string {
       data-index="4"
     >
       <div class="animated-element fade-bottom grid gap-4 text-center">
-        <h2 class="section-title">Gallery</h2>
+        <h2 class="section-title">Galeri</h2>
         <p class="section-subtitle">
           Ini adalah cuplikan dari beberapa produk kami, yang pastinya dapat
           kamu pesan melalui aplikasi kesayangan kamu

@@ -60,10 +60,9 @@ export function Footer(): string {
         >
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
           <p class="leading-normal text-white/30">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            aliquid unde rem odio dolor quae illum reiciendis quia similique
-            voluptates in, eos optio voluptatem. Dolorum quis eaque delectus
-            nostrum nemo.
+            "Saya bukan juru masak yang hebat, saya bukan seniman hebat, tapi
+            saya suka seni, dan saya suka makanan. Jadi, saya adalah penjelajah
+            yang sempurna." - Michael Palin
           </p>
         </section>
         <section
