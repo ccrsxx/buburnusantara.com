@@ -15,7 +15,7 @@ export function About(): string {
           class="animated-element fade-left grid max-w-2xl gap-4 lg:max-w-md [&>p]:text-lg"
         >
           <h2 class="section-title mb-4 text-center lg:text-left">
-            Selamat Datang
+            Tentang Kami
           </h2>
           <p>
             Selamat Datang di Bubur Ayam Kampung Nusantara, berdiri sejak 2018
