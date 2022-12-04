@@ -24,11 +24,11 @@
 
   dialog {
     @apply pointer-events-none fixed inset-0 z-50 my-4 grid min-h-screen max-w-[calc((100%-6px)-2em)]
-           place-items-center bg-transparent p-0 opacity-0 transition sm:my-auto sm:min-h-0;
-  }
+    place-items-center bg-transparent p-0 opacity-0 transition sm:my-auto sm:min-h-0;
 
-  dialog[open] {
-    @apply pointer-events-auto opacity-100;
+    &[open] {
+      @apply pointer-events-auto opacity-100;
+    }
   }
 }
 
