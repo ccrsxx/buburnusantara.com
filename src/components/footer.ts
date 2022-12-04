@@ -12,9 +12,9 @@ export function Footer(): string {
         >
           <h2 class="font-poppins font-medium text-white/60">About us</h2>
           <p class="leading-normal text-white/30">
-            "Saya bukan juru masak yang hebat, saya bukan seniman hebat, tapi
-            saya suka seni, dan saya suka makanan. Jadi, saya adalah penjelajah
-            yang sempurna." - Michael Palin
+            Bubur ayam kampung pilihan dan beras lokal pilihan. Kami menyajikan
+            bubur yang tidak hanya mengenyangkan tetapi juga memiliki kualitas
+            rasa yang tiada duanya.
           </p>
         </section>
         <section

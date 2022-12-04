@@ -1,25 +1,27 @@
 type Link = { name: string; href: string };
 
-const linksPlaceholder: Readonly<Link[]> = [
-  { name: 'About Us', href: '#' },
-  { name: 'Our Chef', href: '#' },
-  { name: 'Events', href: '#' },
-  { name: 'Testimonials', href: '#' }
-];
-
 type FooterLink = {
   title: string;
-  links: Readonly<Link[]>;
+  links: Link[];
 };
 
 const footerLinks: Readonly<FooterLink[]> = [
   {
-    title: 'Company',
-    links: linksPlaceholder
+    title: 'Restaurant',
+    links: [
+      { name: 'Testimonials', href: '#' },
+      { name: 'Commerce', href: '#' },
+      { name: 'Our Chefs', href: '#' },
+      { name: 'Events', href: '#' }
+    ]
   },
   {
-    title: 'Legal',
-    links: linksPlaceholder
+    title: 'More',
+    links: [
+      { name: 'Breakfast', href: '#' },
+      { name: 'Lunch', href: '#' },
+      { name: 'Dinner', href: '#' }
+    ]
   }
 ];
 
