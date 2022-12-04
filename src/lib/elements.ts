@@ -1,5 +1,8 @@
-const navLinks = document.querySelectorAll('.nav-link');
-const hiddenSections = document.querySelectorAll('.hidden-section');
+const navLinks: NodeListOf<HTMLAnchorElement> =
+  document.querySelectorAll('.nav-link');
+
+const hiddenSections: NodeListOf<HTMLElement> =
+  document.querySelectorAll('.hidden-section');
 
 const menuButtons: NodeListOf<HTMLButtonElement> =
   document.querySelectorAll('.menu-button');
