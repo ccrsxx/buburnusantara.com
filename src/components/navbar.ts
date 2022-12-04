@@ -22,7 +22,7 @@ export function Navbar(): string {
             </i>
           </button>
         </div>
-        <nav id="nav-links-container" tabindex="-1">
+        <nav id="nav-links-container">
           ${navLinks.reduce(
             (acc, { name, href }) =>
               acc +
