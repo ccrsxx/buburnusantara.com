@@ -13,7 +13,7 @@ const allMenus: Readonly<Category[]> = [
         name: 'Bubur Ayam Kampung',
         price: 25_000,
         description:
-          'Bubur dengan daging ayam pilihan ditambah cakwe, dibalur dengan minyak wijen impor yang spesial dibuat di Malaysia menghasilkan bubur yang bukan hanya mengenyangkan, tetapi juga bermakna di hati.',
+          'Bubur dengan daging ayam pilihan ditambah cakwe, dibalur dengan minyak wijen impor yang spesial dibuat di Malaysia menghasilkan bubur yang bukan hanya mengenyangkan, tetapi juga bermakna di hati',
         image: '/assets/menu/utama/utama-1.webp'
       },
       {
