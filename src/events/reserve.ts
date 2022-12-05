@@ -1,4 +1,3 @@
-import { Loading } from '@components/ui/loading';
 import { sendEmail } from '@lib/mail';
 import {
   reservationModal,
@@ -10,6 +9,7 @@ import {
 } from '@lib/elements';
 import { isInDialog } from '@lib/utils';
 import { toastFire } from '@lib/toast';
+import { Loading } from '@components/ui/loading';
 import type { Reservation } from '@lib/types/reservation';
 
 reservationModalOpenButton.addEventListener(

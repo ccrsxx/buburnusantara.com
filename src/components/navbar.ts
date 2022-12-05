@@ -1,5 +1,26 @@
 import { html } from '@lib/utils';
-import { navLinks } from '@constants/navbar';
+
+type ValidSection =
+  | 'home'
+  | 'about'
+  | 'favorite'
+  | 'menu'
+  | 'gallery'
+  | 'contact';
+
+type NavLink = {
+  name: Capitalize<ValidSection>;
+  href: string;
+};
+
+const navLinks: Readonly<NavLink[]> = [
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Favorite', href: '#offer' },
+  { name: 'Menu', href: '#menu' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'Contact', href: '#contact' }
+];
 
 export function Navbar(): string {
   return html`
@@ -26,9 +47,11 @@ export function Navbar(): string {
           ${navLinks.reduce(
             (acc, { name, href }) =>
               acc +
-              html`<a class="nav-link smooth-tab rounded-md" href="${href}"
-                >${name}</a
-              >`,
+              html`
+                <a class="nav-link smooth-tab rounded-md" href="${href}">
+                  ${name}
+                </a>
+              `,
             ''
           )}
         </nav>

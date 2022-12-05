@@ -3,9 +3,7 @@ import type { Product } from '@lib/types/product';
 
 type Category = { category: Menu; products: Product[] };
 
-const menus: Readonly<Menu[]> = ['utama', 'topping', 'lainnya'];
-
-const allMenus: Readonly<Category[]> = [
+export const allMenus: Readonly<Category[]> = [
   {
     category: 'utama',
     products: [
@@ -112,5 +110,3 @@ const allMenus: Readonly<Category[]> = [
     ]
   }
 ];
-
-export { menus, allMenus };

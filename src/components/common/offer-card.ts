@@ -13,17 +13,12 @@ export function OfferCard({
   index,
   description
 }: OfferCardProps): string {
-  const indexOfThree = index % 3;
+  const indexOfThree = 1 + (index % 3);
+  const fadeDelayClass = `fade-delay-${indexOfThree * 100}`;
 
   return html`
     <div
-      class="swiper-slide animated-element fade-bottom
-      ${!indexOfThree
-        ? 'delay-100'
-        : indexOfThree === 1
-        ? 'delay-200'
-        : 'delay-300'}
-        opacity-100"
+      class="swiper-slide animated-element fade-bottom ${fadeDelayClass} opacity-100"
     >
       <img
         class="viewable-image h-52 w-full rounded-t-md object-cover"

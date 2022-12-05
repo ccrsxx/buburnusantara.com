@@ -1,6 +1,9 @@
 import { html } from '@lib/utils';
-import { menus, allMenus } from '@constants/menu';
+import { allMenus } from '@constants/menu';
 import { ProductsCategory } from './common/products-category';
+import type { Menu } from '@lib/types/menu';
+
+const menus: Readonly<Menu[]> = ['utama', 'topping', 'lainnya'];
 
 export function Menu(): string {
   return html`

@@ -1,8 +1,8 @@
 import { sendEmail } from '@lib/mail';
 import { contactForm, contactSubmitButton } from '@lib/elements';
+import { toastFire } from '@lib/toast';
 import { CustomIcon } from '@components/ui/custom-icon';
 import { Loading } from '@components/ui/loading';
-import { toastFire } from '@lib/toast';
 import type { Message } from '@lib/types/message';
 
 contactForm.addEventListener('submit', handleContactSubmit);
