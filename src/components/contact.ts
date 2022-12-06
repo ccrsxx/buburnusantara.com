@@ -96,7 +96,7 @@ export function Contact(): string {
                   </a>
                 `,
               ''
-            )}=
+            )}
           </div>
         </div>
       </div>
