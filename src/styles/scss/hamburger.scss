@@ -1,7 +1,5 @@
 #hamburger-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 
   @media screen and (min-width: 1024px) {
     display: none;
