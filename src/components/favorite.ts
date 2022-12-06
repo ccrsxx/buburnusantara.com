@@ -1,10 +1,10 @@
 import { html } from '@lib/utils';
-import { offers } from '@constants/offer';
+import { favorites } from '@constants/favorite';
 import { OfferCard } from './common/offer-card';
 
-export function Offer(): string {
+export function Favorite(): string {
   return html`
-    <section id="offer" class="hidden-section grid gap-12" data-index="2">
+    <section id="favorite" class="hidden-section grid gap-12" data-index="2">
       <div class="animated-element fade-bottom grid gap-4 text-center">
         <h2 class="section-title">Menu Favorit</h2>
         <p class="section-subtitle">
@@ -17,7 +17,7 @@ export function Offer(): string {
         class="swiper animated-element fade-bottom main-container fade-delay-100 !pb-12"
       >
         <div class="swiper-wrapper cursor-grab select-none">
-          ${offers.reduce(
+          ${favorites.reduce(
             (acc, product, index) => acc + OfferCard({ ...product, index }),
             ''
           )}

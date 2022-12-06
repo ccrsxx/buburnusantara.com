@@ -3,7 +3,7 @@ import { html } from '@lib/utils';
 import { Navbar } from './navbar';
 import { Home } from './home';
 import { About } from './about';
-import { Offer } from './offer';
+import { Favorite } from './favorite';
 import { Menu } from './menu';
 import { Gallery } from './gallery';
 import { Contact } from './contact';
@@ -17,7 +17,7 @@ function Index(): string {
     <main class="[&>*:not(:first-child):nth-child(odd)]:bg-main-background">
       ${Home()}
       ${About()}
-      ${Offer()}
+      ${Favorite()}
       ${Menu()}
       ${Gallery()}
       ${Contact()}

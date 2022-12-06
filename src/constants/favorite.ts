@@ -1,6 +1,6 @@
 import type { Product } from '@lib/types/product';
 
-export const offers: Readonly<Product[]> = [
+export const favorites: Readonly<Product[]> = [
   {
     name: 'Bubur Ayam Kampung',
     price: 25_000,
