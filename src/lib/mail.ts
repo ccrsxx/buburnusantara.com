@@ -6,7 +6,7 @@ import {
 } from './env';
 import type { Reservation } from './types/reservation';
 import type { Message } from './types/message';
-import type { Email } from './types/body';
+import type { Email } from './types/email';
 
 export async function sendEmail(data: Reservation | Message): Promise<void> {
   const email: Email = {
