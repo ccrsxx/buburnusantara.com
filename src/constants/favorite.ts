@@ -6,14 +6,14 @@ export const favorites: Readonly<Product[]> = [
     price: 25_000,
     description:
       'Bubur dengan daging ayam pilihan ditambah cakwe, dibalur dengan minyak wijen impor yang spesial dibuat di Malaysia menghasilkan bubur yang bukan hanya mengenyangkan, tetapi juga bermakna di hati',
-    image: '/assets/offer/offer-2.webp'
+    image: '/assets/offer/offer-1.webp'
   },
   {
     name: 'Bubur Polos',
     price: 18_000,
     description:
       'Bubur polos yang diproses dengan kaldu ayam kampung pilihan, dipadu dengan minyak wijen pilihan menghasilkan bubur yang sangat bernutrisi dan nikmat',
-    image: '/assets/offer/offer-1.webp'
+    image: '/assets/offer/offer-2.webp'
   },
   {
     name: 'Telur Asin',
