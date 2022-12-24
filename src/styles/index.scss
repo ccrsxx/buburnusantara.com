@@ -19,6 +19,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply font-raleway text-main-primary;
   }
