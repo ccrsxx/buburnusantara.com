@@ -28,7 +28,7 @@
   }
 
   &.scrolled-middle {
-    @apply fixed py-4 px-8 shadow hover:shadow-lg lg:-mt-32 lg:bg-white/60 lg:opacity-0 lg:backdrop-blur-md;
+    @apply fixed px-8 py-4 shadow hover:shadow-lg lg:-mt-32 lg:bg-white/60 lg:opacity-0 lg:backdrop-blur-md;
   }
 
   &.scrolled-bottom {

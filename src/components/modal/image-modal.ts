@@ -26,7 +26,7 @@ export function ImageModal(): string {
             </a>
           </div>
           <a
-            class="image-modal-link absolute left-0 bottom-0 cursor-pointer font-medium text-white/80 decoration-transparent
+            class="image-modal-link absolute bottom-0 left-0 cursor-pointer font-medium text-white/80 decoration-transparent
                    underline-offset-2 transition hover:text-white hover:underline hover:decoration-white focus-visible:text-white"
             target="_blank"
             rel="noreferrer"
