@@ -16,7 +16,10 @@
       width: 16px;
       height: 2px;
       background-color: #213547;
-      transition: top 250ms, background-color 500ms, transform 250ms;
+      transition:
+        top 250ms,
+        background-color 500ms,
+        transform 250ms;
     }
 
     .top {
@@ -41,7 +44,10 @@
   &.active:hover > * > *,
   &.active:focus-visible > * > * {
     background-color: #3c3c3cb3;
-    transition: top 250ms, background-color 250ms, transform 250ms;
+    transition:
+      top 250ms,
+      background-color 250ms,
+      transform 250ms;
   }
 
   &:hover .top,
