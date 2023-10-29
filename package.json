@@ -35,6 +35,6 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "swiper": "^8.4.4"
+    "swiper": "^11.0.0"
   }
 }
